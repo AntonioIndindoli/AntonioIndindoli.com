@@ -37,8 +37,7 @@ const LandingPage = () => {
               <p className="intro-eyebrow">About Me</p>
               <h1 id="about-title">Antonio Indindoli</h1>
               <p className="hero-subtitle">
-                Recent Computer Science graduate from San Francisco State University with hands-on experience shipping
-                commercial software, from games to full-stack web platforms.
+                Recent Computer Science graduate from San Francisco State University with extensive experience developing and shipping games and web experiences.
               </p>
             </div>
             <div className="contact-grid">
