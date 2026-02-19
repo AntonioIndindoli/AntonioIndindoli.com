@@ -616,6 +616,15 @@ main {
     .hero {
         padding-top: 50px;
     }
+
+.hero-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 48px;
+}
 }
 
 @media (max-width: 640px) {
