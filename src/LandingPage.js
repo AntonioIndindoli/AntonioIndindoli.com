@@ -21,48 +21,61 @@ const skills = [
   },
 ];
 
-
+const contactItems = [
+  {
+    label: 'Email',
+    value: 'indindoliantonio@gmail.com',
+    href: 'mailto:indindoliantonio@gmail.com',
+  },
+  {
+    label: 'Phone',
+    value: '707-372-3995',
+    href: 'tel:+17073723995',
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/indindoli',
+    href: 'https://linkedin.com/in/indindoli',
+  },
+  {
+    label: 'GitHub',
+    value: 'github.com/AntonioIndindoli',
+    href: 'https://github.com/AntonioIndindoli',
+  },
+];
 
 const LandingPage = () => {
   return (
     <div className="landing-page" id="home">
       <Header />
       <main>
-
-        {/* Hero */}
-
         <section className="hero section" id="about" aria-labelledby="about-title">
           <div className="hero-content">
             <div className="about-hero-intro">
               <p className="intro-eyebrow">About Me</p>
               <h1 id="about-title">Antonio Indindoli</h1>
               <p className="hero-subtitle">
-                I’m a software developer who builds games and web applications. I’ve shipped projects using C#, JavaScript, React, Node.js, and Unity, and I’m comfortable working across the stack from backend systems to front-end interfaces.
+                I’m a software developer who builds games and web applications. I’ve shipped projects
+                using C#, JavaScript, React, Node.js, and Unity, and I’m comfortable working across
+                the stack from backend systems to front-end interfaces.
               </p>
             </div>
-            <div className="contact-grid">
-              <a className="contact-card" >
-                <span className="contact-value">indindoliantonio@gmail.com</span>
-              </a>
-              <a className="contact-card" >
-                <span className="contact-value">707-372-3995</span>
-              </a>
-              <a className="contact-card" href="https://linkedin.com/in/indindoli" target="_blank" rel="noopener noreferrer">
-                <span className="contact-value">linkedin.com/in/indindoli</span>
-              </a>
-              <a className="contact-card" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
-                <span className="contact-value">github.com/AntonioIndindoli</span>
-              </a>
+            <div className="contact-grid" aria-label="Contact links">
+              {contactItems.map((item) => (
+                <a
+                  key={item.label}
+                  className="contact-card"
+                  href={item.href}
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >
+                  <span className="contact-label">{item.label}</span>
+                  <span className="contact-value">{item.value}</span>
+                </a>
+              ))}
             </div>
-
           </div>
         </section>
-
-        {/* Contact */}
-
-
-
-        {/* Education */}
 
         <section className="section education" id="education" aria-labelledby="education-title">
           <div className="section-intro">
@@ -73,8 +86,6 @@ const LandingPage = () => {
             <p>B.S. in Computer Science - May 2025</p>
           </div>
         </section>
-
-        {/* Skills */}
 
         <section className="section skills" id="skills" aria-labelledby="skills-title">
           <div className="section-intro">
@@ -94,8 +105,6 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Contributions */}
-
         <section className="section contributions" id="contributions" aria-labelledby="contributions-title">
           <div className="section-intro">
             <h2 id="contributions-title">GitHub Contributions</h2>
@@ -107,9 +116,7 @@ const LandingPage = () => {
             />
           </div>
         </section>
-
       </main>
-
     </div>
   );
 };
