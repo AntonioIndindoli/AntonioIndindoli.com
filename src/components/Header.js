@@ -3,6 +3,7 @@ import '../LandingPage.css';
 
 const navLinks = [
   { href: '#about', label: 'About' },
+  { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
   { href: '#education', label: 'Education' },
   { href: '#contributions', label: 'Contributions' },

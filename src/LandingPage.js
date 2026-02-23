@@ -44,6 +44,29 @@ const contactItems = [
   },
 ];
 
+const projectItems = [
+  {
+    title: 'Project Title Placeholder',
+    description:
+      'This is placeholder text for a future project summary. Use this area to describe what problem the project solves and your contributions.',
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    image:
+      'https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Placeholder project preview on a laptop screen',
+    href: '#',
+  },
+  {
+    title: 'Another Project Placeholder',
+    description:
+      'Add project details here such as the key features, architecture decisions, or measurable outcomes once the project is finalized.',
+    technologies: ['JavaScript', 'Express', 'PostgreSQL'],
+    image:
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Placeholder coding workspace with monitor and keyboard',
+    href: '#',
+  },
+];
+
 const LandingPage = () => {
   return (
     <div className="landing-page" id="home">
@@ -74,6 +97,31 @@ const LandingPage = () => {
                 </a>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="section projects" id="projects" aria-labelledby="projects-title">
+          <div className="section-intro">
+            <h2 id="projects-title">Projects</h2>
+          </div>
+          <div className="projects-grid">
+            {projectItems.map((project) => (
+              <article key={project.title} className="project-card">
+                <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" />
+                <div className="project-body">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <ul className="project-tech-list" aria-label={`${project.title} technologies`}>
+                    {project.technologies.map((technology) => (
+                      <li key={technology}>{technology}</li>
+                    ))}
+                  </ul>
+                  <a href={project.href} className="project-link" aria-label={`View ${project.title}`}>
+                    View Project
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 

@@ -192,6 +192,80 @@ main {
     gap: 14px;
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.project-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: grid;
+}
+
+.project-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.project-body {
+    padding: 18px;
+    display: grid;
+    gap: 12px;
+}
+
+.project-body h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.project-body p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.project-tech-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.project-tech-list li {
+    font-size: 0.82rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.project-link {
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(138, 180, 255, 0.45);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 600;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+    border-color: rgba(138, 180, 255, 0.85);
+    background: rgba(138, 180, 255, 0.14);
+}
+
 .skill-card,
 .education-card,
 .contribution-chart {
