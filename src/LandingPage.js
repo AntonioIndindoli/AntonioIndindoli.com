@@ -207,7 +207,7 @@ const LandingPage = () => {
                                     scrollProjects(-1);
                                 }}
                             >
-                                ←
+                                ‹
                             </button>
                         )}
                         <div
@@ -253,7 +253,7 @@ const LandingPage = () => {
                                     scrollProjects(1);
                                 }}
                             >
-                                →
+                                ›
                             </button>
                         )}
                     </div>
