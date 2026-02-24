@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import Header from './components/Header';
 import './LandingPage.css';
 import unityToolkitImage from './images/unitytoolkit.png';
@@ -92,6 +92,51 @@ const projectItems = [
 ];
 
 const LandingPage = () => {
+    const projectsGridRef = useRef(null);
+    const lastInteractionRef = useRef(Date.now());
+    const idleDelayMs = 4500;
+
+    const markInteracted = useCallback(() => {
+        lastInteractionRef.current = Date.now();
+    }, []);
+
+    const scrollProjects = useCallback((direction = 1) => {
+        const grid = projectsGridRef.current;
+
+        if (!grid) {
+            return;
+        }
+
+        const card = grid.querySelector('.project-card');
+        const cardWidth = card ? card.getBoundingClientRect().width : grid.clientWidth * 0.75;
+        const style = window.getComputedStyle(grid);
+        const gap = parseFloat(style.columnGap || style.gap || '0') || 0;
+        const step = (cardWidth + gap) * direction;
+        const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
+
+        if (direction > 0 && grid.scrollLeft >= maxScrollLeft - 4) {
+            grid.scrollTo({ left: 0, behavior: 'smooth' });
+            return;
+        }
+
+        if (direction < 0 && grid.scrollLeft <= 4) {
+            grid.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+            return;
+        }
+
+        grid.scrollBy({ left: step, behavior: 'smooth' });
+    }, []);
+
+    useEffect(() => {
+        const interval = window.setInterval(() => {
+            if (Date.now() - lastInteractionRef.current >= idleDelayMs) {
+                scrollProjects(1);
+            }
+        }, 2200);
+
+        return () => window.clearInterval(interval);
+    }, [scrollProjects]);
+
     return (
         <div className="landing-page" id="home">
             <Header />
@@ -125,10 +170,43 @@ const LandingPage = () => {
                 </section>
 
                 <section className="section-projects" id="projects" aria-labelledby="projects-title">
-                    <div className="section-intro">
+                    <div className="section-intro projects-intro">
                         <h2 id="projects-title">Projects</h2>
+                        <div className="projects-controls" aria-label="Project carousel controls">
+                            <button
+                                type="button"
+                                className="projects-arrow"
+                                aria-label="Scroll projects left"
+                                onClick={() => {
+                                    markInteracted();
+                                    scrollProjects(-1);
+                                }}
+                            >
+                                ←
+                            </button>
+                            <button
+                                type="button"
+                                className="projects-arrow"
+                                aria-label="Scroll projects right"
+                                onClick={() => {
+                                    markInteracted();
+                                    scrollProjects(1);
+                                }}
+                            >
+                                →
+                            </button>
+                        </div>
                     </div>
-                    <div className="projects-grid" role="list" aria-label="Featured project cards">
+                    <div
+                        ref={projectsGridRef}
+                        className="projects-grid"
+                        role="list"
+                        aria-label="Featured project cards"
+                        onScroll={markInteracted}
+                        onWheel={markInteracted}
+                        onMouseDown={markInteracted}
+                        onTouchStart={markInteracted}
+                    >
                         {projectItems.map((project) => (
                             <article key={project.title} className="project-card" role="listitem">
                                 <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" />

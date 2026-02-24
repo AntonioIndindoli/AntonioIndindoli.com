@@ -37,6 +37,13 @@ main {
     margin-bottom: 14px;
 }
 
+.projects-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
 .section-intro h2 {
     margin: 0;
     font-size: clamp(1.1rem, 2vw, 1.35rem);
@@ -208,6 +215,30 @@ main {
     margin: 0 -6px;
     scrollbar-width: thin;
     scrollbar-color: rgba(138, 180, 255, 0.6) rgba(255, 255, 255, 0.08);
+}
+
+.projects-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.projects-arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.projects-arrow:hover,
+.projects-arrow:focus-visible {
+    border-color: rgba(138, 180, 255, 0.8);
+    background: rgba(138, 180, 255, 0.2);
+    transform: translateY(-1px);
 }
 
 .projects-grid::-webkit-scrollbar {
@@ -433,6 +464,10 @@ main {
 }
 
 @media (max-width: 620px) {
+
+    .projects-intro {
+        align-items: flex-start;
+    }
 
     main,
     .header-inner {
