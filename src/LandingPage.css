@@ -237,15 +237,23 @@ main {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+    flex: 1;
 }
 
 .project-tech-list li {
-    font-size: 0.82rem;
-    padding: 6px 10px;
+    font-size: 0.76rem;
+    padding: 5px 9px;
     border-radius: 999px;
     border: 1px solid var(--line);
     color: var(--text-secondary);
     background: rgba(255, 255, 255, 0.02);
+}
+
+.project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
 }
 
 .project-link {
@@ -258,6 +266,7 @@ main {
     font-size: 0.86rem;
     font-weight: 600;
     transition: border-color 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
 }
 
 .project-link:hover,
