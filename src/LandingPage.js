@@ -46,63 +46,47 @@ const contactItems = [
 
 const projectItems = [
     {
-        title: 'Nebula Notes',
+        title: 'Self-Published Unity Editor Toolkit',
+        period: 'January 2024 – October 2025',
         description:
-            'A focused note-taking workspace concept with frictionless tagging, markdown shortcuts, and a clean command palette flow.',
-        technologies: ['React', 'TypeScript', 'Supabase'],
+            'Built and self-published a Unity toolkit featuring a graph-based destruction system for realistic collapse and stress propagation, plus custom editor tooling and thorough documentation to improve developer workflows.',
+        technologies: ['Unity', 'C#'],
         image:
-            'https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Notebook interface concept shown on a laptop',
+            'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Game development tooling and editor workflow on screen',
         href: '#',
     },
     {
-        title: 'TrailMix Planner',
+        title: 'Self-Published Steam Game',
+        period: 'January 2022 – June 2024',
         description:
-            'A trip planning dashboard mockup that combines map-first itineraries, drag-and-drop timelines, and shared travel lists.',
-        technologies: ['JavaScript', 'Express', 'PostgreSQL'],
+            'Released a commercial Steam game that reached 200+ paid downloads in the first month, designing AI behavior trees, dynamic lighting, procedural level generation, and managing production from prototype to post-launch feedback.',
+        technologies: ['Unity', 'C#'],
         image:
-            'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Travel planning dashboard displayed on a large monitor',
+            'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Published indie game experience with immersive environment',
         href: '#',
     },
     {
-        title: 'Pulse Board',
+        title: 'University-Athlete Matching Platform',
+        period: 'August 2024 – December 2024',
         description:
-            'A team pulse-check prototype with lightweight standup prompts, trend snapshots, and digest-style weekly recaps.',
-        technologies: ['Next.js', 'Node.js', 'Prisma'],
+            'Collaborated in a 4-person Agile team to build an athlete-university matching platform, owning backend REST APIs, data modeling, GCP deployment, Google Maps integration, and a custom ranking algorithm built from 5,000+ Olympian data points.',
+        technologies: ['React.js', 'Next.js', 'SQL', 'Google Cloud'],
         image:
-            'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Analytics and activity widgets in a dark dashboard layout',
+            'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Team collaborating on a web platform with map-based planning',
         href: '#',
     },
     {
-        title: 'Echo Commerce',
+        title: 'Online Poker Platform',
+        period: 'February 2023 – May 2023',
         description:
-            'A modern storefront concept centered on fast browsing, personalized recommendations, and an elegant checkout journey.',
-        technologies: ['React', 'Stripe', 'Firebase'],
+            'Developed a full-stack multiplayer poker platform in a 3-person Agile team, leading WebSocket implementation for real-time gameplay, chat, and synchronized game state while supporting scalable PostgreSQL data and session design.',
+        technologies: ['Node.js', 'WebSockets', 'PostgreSQL'],
         image:
-            'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Online shopping interface with products and cart summary',
-        href: '#',
-    },
-    {
-        title: 'Orbit Studio',
-        description:
-            'A creator workspace concept for managing content pipelines, scheduling releases, and tracking audience engagement.',
-        technologies: ['Vue', 'GraphQL', 'AWS'],
-        image:
-            'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Creative team collaborating around a project planning table',
-        href: '#',
-    },
-    {
-        title: 'FrameFlow',
-        description:
-            'A cinematic portfolio builder idea with smooth reel navigation, curated galleries, and shareable project pages.',
-        technologies: ['React', 'Framer Motion', 'Cloudinary'],
-        image:
-            'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Code editor and design references arranged on a desktop workspace',
+            'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Multiplayer card game interface displayed on monitor',
         href: '#',
     },
 ];
