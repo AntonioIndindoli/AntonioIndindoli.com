@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Header from './components/Header';
 import './LandingPage.css';
 import unityToolkitImage from './images/unitytoolkit.png';
@@ -95,6 +95,22 @@ const LandingPage = () => {
     const projectsGridRef = useRef(null);
     const lastInteractionRef = useRef(Date.now());
     const idleDelayMs = 10000;
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(true);
+
+    const updateArrowVisibility = useCallback(() => {
+        const grid = projectsGridRef.current;
+
+        if (!grid) {
+            return;
+        }
+
+        const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
+        const epsilon = 2;
+
+        setCanScrollLeft(grid.scrollLeft > epsilon);
+        setCanScrollRight(grid.scrollLeft < maxScrollLeft - epsilon);
+    }, []);
 
     const markInteracted = useCallback(() => {
         lastInteractionRef.current = Date.now();
@@ -115,12 +131,10 @@ const LandingPage = () => {
         const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
 
         if (direction > 0 && grid.scrollLeft >= maxScrollLeft - 4) {
-            grid.scrollTo({ left: 0, behavior: 'smooth' });
             return;
         }
 
         if (direction < 0 && grid.scrollLeft <= 4) {
-            grid.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
             return;
         }
 
@@ -136,6 +150,15 @@ const LandingPage = () => {
 
         return () => window.clearInterval(interval);
     }, [scrollProjects]);
+
+    useEffect(() => {
+        updateArrowVisibility();
+        window.addEventListener('resize', updateArrowVisibility);
+
+        return () => {
+            window.removeEventListener('resize', updateArrowVisibility);
+        };
+    }, [updateArrowVisibility]);
 
     return (
         <div className="landing-page" id="home">
@@ -174,23 +197,28 @@ const LandingPage = () => {
                         <h2 id="projects-title">Projects</h2>
                     </div>
                     <div className="projects-scroller" aria-label="Project carousel controls">
-                        <button
-                            type="button"
-                            className="projects-arrow"
-                            aria-label="Scroll projects left"
-                            onClick={() => {
-                                markInteracted();
-                                scrollProjects(-1);
-                            }}
-                        >
-                            ←
-                        </button>
+                        {canScrollLeft && (
+                            <button
+                                type="button"
+                                className="projects-arrow"
+                                aria-label="Scroll projects left"
+                                onClick={() => {
+                                    markInteracted();
+                                    scrollProjects(-1);
+                                }}
+                            >
+                                ←
+                            </button>
+                        )}
                         <div
                             ref={projectsGridRef}
                             className="projects-grid"
                             role="list"
                             aria-label="Featured project cards"
-                            onScroll={markInteracted}
+                            onScroll={() => {
+                                markInteracted();
+                                updateArrowVisibility();
+                            }}
                             onWheel={markInteracted}
                             onMouseDown={markInteracted}
                             onTouchStart={markInteracted}
@@ -215,17 +243,19 @@ const LandingPage = () => {
                                 </article>
                             ))}
                         </div>
-                        <button
-                            type="button"
-                            className="projects-arrow"
-                            aria-label="Scroll projects right"
-                            onClick={() => {
-                                markInteracted();
-                                scrollProjects(1);
-                            }}
-                        >
-                            →
-                        </button>
+                        {canScrollRight && (
+                            <button
+                                type="button"
+                                className="projects-arrow"
+                                aria-label="Scroll projects right"
+                                onClick={() => {
+                                    markInteracted();
+                                    scrollProjects(1);
+                                }}
+                            >
+                                →
+                            </button>
+                        )}
                     </div>
                 </section>
 
