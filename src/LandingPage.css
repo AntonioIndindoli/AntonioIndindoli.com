@@ -208,7 +208,7 @@ main {
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
-    padding: 8px 16px 18px 16px;
+    padding: 8px 0px 18px 0px;
     margin: 0;
     scrollbar-width: thin;
     scrollbar-color: rgba(138, 180, 255, 0.6) rgba(255, 255, 255, 0.08);
@@ -218,11 +218,12 @@ main {
     position: relative;
 }
 
-.projects-arrow {
+.projects-arrow-left,
+.projects-arrow-right {
     position: absolute;
     top: 8px;
     bottom: 0px;
-    width: 36px;
+    width: 46px;
     border: 0px solid var(--line);
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.39) 0%, rgba(18, 19, 41, 0) 100%);
     color: var(--text-primary);
@@ -236,12 +237,12 @@ main {
     transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
-.projects-arrow:first-of-type {
+.projects-arrow-left {
     left: 0;
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(18, 19, 41, 0) 100%);
 }
 
-.projects-arrow:last-of-type {
+.projects-arrow-right {
     right: 0;
     background: linear-gradient(270deg, rgb(0, 0, 0) 0%, rgba(18, 19, 41, 0) 100%);
 }
@@ -252,13 +253,13 @@ main {
     transform: translateY(-1px);
 }
 
-.projects-arrow:first-of-type:hover,
-.projects-arrow:first-of-type:focus-visible {
+.projects-arrow-left:hover,
+.projects-arrow-left:focus-visible {
     background: linear-gradient(90deg, rgba(120, 197, 255, 0.55) 0%, rgba(18, 19, 41, 0) 100%);
 }
 
-.projects-arrow:last-of-type:hover,
-.projects-arrow:last-of-type:focus-visible {
+.projects-arrow-right:hover,
+.projects-arrow-right:focus-visible {
     background: linear-gradient(270deg, rgba(120, 197, 255, 0.55) 0%, rgba(18, 19, 41, 0) 100%);
 }
 

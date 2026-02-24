@@ -200,7 +200,7 @@ const LandingPage = () => {
                         {canScrollLeft && (
                             <button
                                 type="button"
-                                className="projects-arrow"
+                                className="projects-arrow-left"
                                 aria-label="Scroll projects left"
                                 onClick={() => {
                                     markInteracted();
@@ -246,7 +246,7 @@ const LandingPage = () => {
                         {canScrollRight && (
                             <button
                                 type="button"
-                                className="projects-arrow"
+                                className="projects-arrow-right"
                                 aria-label="Scroll projects right"
                                 onClick={() => {
                                     markInteracted();
