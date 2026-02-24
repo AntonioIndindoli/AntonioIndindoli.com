@@ -223,16 +223,13 @@ main {
     position: absolute;
     top: 8px;
     bottom: 0px;
-    width: 46px;
+    width: 50px;
     border: 0px solid var(--line);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.39) 0%, rgba(18, 19, 41, 0) 100%);
-    color: var(--text-primary);
-    font-size: 1.2rem;
+    color: rgb(168, 200, 255);
+    font-size: 3rem;
     display: grid;
+    align-items: center;
     cursor: pointer;
-    justify-items: center;
-    align-content: start;
-    padding-top: 20%;
     z-index: 2;
     transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }

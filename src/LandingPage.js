@@ -57,7 +57,7 @@ const projectItems = [
         technologies: ['Unity', 'C#'],
         image: unityToolkitImage,
         imageAlt: 'Game development tooling and editor workflow on screen',
-        href: '#',
+        href: 'https://mayuns.com/#/destructible-structure-builder',
     },
     {
         title: 'Self-Published Horror Game',
@@ -67,7 +67,7 @@ const projectItems = [
         technologies: ['Unity', 'C#'],
         image: steamGameImage,
         imageAlt: 'Published indie game experience with immersive environment',
-        href: '#',
+        href: 'https://mayuns.com/#/backrooms-unseen-tapes',
     },
     {
         title: 'University-Athlete Matching Platform',
@@ -77,7 +77,7 @@ const projectItems = [
         technologies: ['React.js', 'Next.js', 'SQL', 'Google Cloud'],
         image: aspiroImage,
         imageAlt: 'Team collaborating on a web platform with map-based planning',
-        href: '#',
+        href: 'https://github.com/AntonioIndindoli/Aspiro',
     },
     {
         title: 'Online Poker Platform',
@@ -87,7 +87,7 @@ const projectItems = [
         technologies: ['Node.js', 'WebSockets', 'PostgreSQL'],
         image: pokerImage,
         imageAlt: 'Multiplayer card game interface displayed on monitor',
-        href: '#',
+        href: 'https://github.com/csc-667-spring-2023-roberts/team-zed-repo',
     },
 ];
 
