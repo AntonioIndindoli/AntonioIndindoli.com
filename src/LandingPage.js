@@ -46,23 +46,63 @@ const contactItems = [
 
 const projectItems = [
   {
-    title: 'Project Title Placeholder',
+    title: 'Nebula Notes',
     description:
-      'This is placeholder text for a future project summary. Use this area to describe what problem the project solves and your contributions.',
-    technologies: ['React', 'Node.js', 'MongoDB'],
+      'A focused note-taking workspace concept with frictionless tagging, markdown shortcuts, and a clean command palette flow.',
+    technologies: ['React', 'TypeScript', 'Supabase'],
     image:
       'https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Placeholder project preview on a laptop screen',
+    imageAlt: 'Notebook interface concept shown on a laptop',
     href: '#',
   },
   {
-    title: 'Another Project Placeholder',
+    title: 'TrailMix Planner',
     description:
-      'Add project details here such as the key features, architecture decisions, or measurable outcomes once the project is finalized.',
+      'A trip planning dashboard mockup that combines map-first itineraries, drag-and-drop timelines, and shared travel lists.',
     technologies: ['JavaScript', 'Express', 'PostgreSQL'],
     image:
       'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Placeholder coding workspace with monitor and keyboard',
+    imageAlt: 'Travel planning dashboard displayed on a large monitor',
+    href: '#',
+  },
+  {
+    title: 'Pulse Board',
+    description:
+      'A team pulse-check prototype with lightweight standup prompts, trend snapshots, and digest-style weekly recaps.',
+    technologies: ['Next.js', 'Node.js', 'Prisma'],
+    image:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Analytics and activity widgets in a dark dashboard layout',
+    href: '#',
+  },
+  {
+    title: 'Echo Commerce',
+    description:
+      'A modern storefront concept centered on fast browsing, personalized recommendations, and an elegant checkout journey.',
+    technologies: ['React', 'Stripe', 'Firebase'],
+    image:
+      'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Online shopping interface with products and cart summary',
+    href: '#',
+  },
+  {
+    title: 'Orbit Studio',
+    description:
+      'A creator workspace concept for managing content pipelines, scheduling releases, and tracking audience engagement.',
+    technologies: ['Vue', 'GraphQL', 'AWS'],
+    image:
+      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Creative team collaborating around a project planning table',
+    href: '#',
+  },
+  {
+    title: 'FrameFlow',
+    description:
+      'A cinematic portfolio builder idea with smooth reel navigation, curated galleries, and shareable project pages.',
+    technologies: ['React', 'Framer Motion', 'Cloudinary'],
+    image:
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Code editor and design references arranged on a desktop workspace',
     href: '#',
   },
 ];
@@ -104,9 +144,9 @@ const LandingPage = () => {
           <div className="section-intro">
             <h2 id="projects-title">Projects</h2>
           </div>
-          <div className="projects-grid">
+          <div className="projects-grid" role="list" aria-label="Featured project cards">
             {projectItems.map((project) => (
-              <article key={project.title} className="project-card">
+              <article key={project.title} className="project-card" role="listitem">
                 <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" />
                 <div className="project-body">
                   <h3>{project.title}</h3>
