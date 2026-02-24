@@ -38,9 +38,7 @@ main {
 }
 
 .projects-intro {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: block;
 }
 
 .section-intro h2 {
@@ -218,16 +216,15 @@ main {
 
 .projects-scroller {
     display: grid;
-    grid-template-columns: 44px minmax(0, 1fr) 44px;
-    gap: 12px;
+    grid-template-columns: 52px minmax(0, 1fr) 52px;
+    gap: 10px;
     align-items: stretch;
 }
 
 .projects-arrow {
     width: 100%;
     height: 100%;
-    min-height: 100%;
-    border-radius: 14px;
+    border-radius: 12px;
     border: 1px solid var(--line);
     background: var(--bg-elevated);
     color: var(--text-primary);
@@ -467,16 +464,12 @@ main {
     }
 
     .projects-scroller {
-        grid-template-columns: 38px minmax(0, 1fr) 38px;
+        grid-template-columns: 44px minmax(0, 1fr) 44px;
         gap: 8px;
     }
 }
 
 @media (max-width: 620px) {
-
-    .projects-intro {
-        align-items: flex-start;
-    }
 
     main,
     .header-inner {
