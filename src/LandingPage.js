@@ -1,6 +1,10 @@
 import React from 'react';
 import Header from './components/Header';
 import './LandingPage.css';
+import unityToolkitImage from './images/unitytoolkit.png';
+import steamGameImage from './images/steamgame.png';
+import aspiroImage from './images/aspiro.jpg';
+import pokerImage from './images/poker.jpg';
 
 const skills = [
     {
@@ -51,8 +55,7 @@ const projectItems = [
         description:
             'Built and self-published a Unity toolkit featuring a graph-based destruction system for realistic collapse and stress propagation, plus custom editor tooling and thorough documentation to improve developer workflows.',
         technologies: ['Unity', 'C#'],
-        image:
-            'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80',
+        image: unityToolkitImage,
         imageAlt: 'Game development tooling and editor workflow on screen',
         href: '#',
     },
@@ -62,8 +65,7 @@ const projectItems = [
         description:
             'Released a commercial Steam game that reached 200+ paid downloads in the first month, designing AI behavior trees, dynamic lighting, procedural level generation, and managing production from prototype to post-launch feedback.',
         technologies: ['Unity', 'C#'],
-        image:
-            'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
+        image: steamGameImage,
         imageAlt: 'Published indie game experience with immersive environment',
         href: '#',
     },
@@ -73,8 +75,7 @@ const projectItems = [
         description:
             'Collaborated in a 4-person Agile team to build an athlete-university matching platform, owning backend REST APIs, data modeling, GCP deployment, Google Maps integration, and a custom ranking algorithm built from 5,000+ Olympian data points.',
         technologies: ['React.js', 'Next.js', 'SQL', 'Google Cloud'],
-        image:
-            'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80',
+        image: aspiroImage,
         imageAlt: 'Team collaborating on a web platform with map-based planning',
         href: '#',
     },
@@ -84,8 +85,7 @@ const projectItems = [
         description:
             'Developed a full-stack multiplayer poker platform in a 3-person Agile team, leading WebSocket implementation for real-time gameplay, chat, and synchronized game state while supporting scalable PostgreSQL data and session design.',
         technologies: ['Node.js', 'WebSockets', 'PostgreSQL'],
-        image:
-            'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80',
+        image: pokerImage,
         imageAlt: 'Multiplayer card game interface displayed on monitor',
         href: '#',
     },
