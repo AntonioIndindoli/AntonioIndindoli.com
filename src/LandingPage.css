@@ -208,8 +208,8 @@ main {
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
-    padding: 8px 6px 18px;
-    margin: 0 -6px;
+    padding: 8px 16px 18px 16px;
+    margin: 0;
     scrollbar-width: thin;
     scrollbar-color: rgba(138, 180, 255, 0.6) rgba(255, 255, 255, 0.08);
 }
@@ -221,27 +221,29 @@ main {
 .projects-arrow {
     position: absolute;
     top: 8px;
-    bottom: 18px;
+    bottom: 0px;
     width: 36px;
     border: 0px solid var(--line);
-    background: linear-gradient(90deg, rgba(120, 197, 255, 0.082) 0%, rgba(18, 19, 41, 0) 100%); 
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.39) 0%, rgba(18, 19, 41, 0) 100%);
     color: var(--text-primary);
     font-size: 1.2rem;
     display: grid;
-    place-items: center;
     cursor: pointer;
+    justify-items: center;
+    align-content: start;
+    padding-top: 20%;
     z-index: 2;
     transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
 .projects-arrow:first-of-type {
     left: 0;
-    background: linear-gradient(90deg, rgba(120, 197, 255, 0.082) 0%, rgba(18, 19, 41, 0) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(18, 19, 41, 0) 100%);
 }
 
 .projects-arrow:last-of-type {
     right: 0;
-    background: linear-gradient(270deg, rgba(120, 197, 255, 0.082) 0%, rgba(18, 19, 41, 0) 100%);
+    background: linear-gradient(270deg, rgb(0, 0, 0) 0%, rgba(18, 19, 41, 0) 100%);
 }
 
 .projects-arrow:hover,
