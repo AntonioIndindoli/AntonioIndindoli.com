@@ -344,11 +344,68 @@ main {
 
 .education-card {
     padding: 24px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right, rgba(138, 180, 255, 0.2), transparent 45%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+        var(--bg-elevated);
 }
 
-.education-card p {
+.education-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(138, 180, 255, 0.2);
+    pointer-events: none;
+}
+
+.education-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.education-degree {
     margin: 0;
     color: var(--text-secondary);
+    font-size: 0.98rem;
+}
+
+.education-status {
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(138, 180, 255, 0.4);
+    background: rgba(138, 180, 255, 0.15);
+    color: var(--text-primary);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.education-date {
+    margin: 0;
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.education-highlights {
+    margin: 16px 0 0;
+    padding-left: 20px;
+    display: grid;
+    gap: 8px;
+}
+
+.education-highlights li {
+    color: var(--text-secondary);
+    font-size: 0.93rem;
+    line-height: 1.45;
 }
 
 .contribution-chart {
@@ -395,5 +452,13 @@ main {
         grid-auto-columns: 86%;
     }
 
+    .education-card-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .education-status {
+        align-self: flex-start;
+    }
 
 }

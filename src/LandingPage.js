@@ -172,8 +172,19 @@ const LandingPage = () => {
             <h2 id="education-title">Education</h2>
           </div>
           <div className="education-card">
-            <h3>San Francisco State University</h3>
-            <p>B.S. in Computer Science - May 2025</p>
+            <div className="education-card-top">
+              <div>
+                <h3>San Francisco State University</h3>
+                <p className="education-degree">B.S. in Computer Science</p>
+              </div>
+              <span className="education-status">Graduated</span>
+            </div>
+            <p className="education-date">May 2025</p>
+            <ul className="education-highlights" aria-label="Education highlights">
+              <li>Focused on software engineering and scalable web application development.</li>
+              <li>Built collaborative projects using React, Node.js, and cloud tooling.</li>
+              <li>Strengthened foundations in algorithms, systems design, and database modeling.</li>
+            </ul>
           </div>
         </section>
 
