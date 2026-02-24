@@ -172,60 +172,60 @@ const LandingPage = () => {
                 <section className="section-projects" id="projects" aria-labelledby="projects-title">
                     <div className="section-intro projects-intro">
                         <h2 id="projects-title">Projects</h2>
-                        <div className="projects-controls" aria-label="Project carousel controls">
-                            <button
-                                type="button"
-                                className="projects-arrow"
-                                aria-label="Scroll projects left"
-                                onClick={() => {
-                                    markInteracted();
-                                    scrollProjects(-1);
-                                }}
-                            >
-                                ←
-                            </button>
-                            <button
-                                type="button"
-                                className="projects-arrow"
-                                aria-label="Scroll projects right"
-                                onClick={() => {
-                                    markInteracted();
-                                    scrollProjects(1);
-                                }}
-                            >
-                                →
-                            </button>
-                        </div>
                     </div>
-                    <div
-                        ref={projectsGridRef}
-                        className="projects-grid"
-                        role="list"
-                        aria-label="Featured project cards"
-                        onScroll={markInteracted}
-                        onWheel={markInteracted}
-                        onMouseDown={markInteracted}
-                        onTouchStart={markInteracted}
-                    >
-                        {projectItems.map((project) => (
-                            <article key={project.title} className="project-card" role="listitem">
-                                <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" />
-                                <div className="project-body">
-                                    <h3>{project.title}</h3>
-                                    <p>{project.description}</p>
-                                    <div className="project-footer">
-                                        <ul className="project-tech-list" aria-label={`${project.title} technologies`}>
-                                            {project.technologies.map((technology) => (
-                                                <li key={technology}>{technology}</li>
-                                            ))}
-                                        </ul>
-                                        <a href={project.href} className="project-link" aria-label={`View ${project.title}`}>
-                                            View Project
-                                        </a>
+                    <div className="projects-scroller" aria-label="Project carousel controls">
+                        <button
+                            type="button"
+                            className="projects-arrow"
+                            aria-label="Scroll projects left"
+                            onClick={() => {
+                                markInteracted();
+                                scrollProjects(-1);
+                            }}
+                        >
+                            ←
+                        </button>
+                        <div
+                            ref={projectsGridRef}
+                            className="projects-grid"
+                            role="list"
+                            aria-label="Featured project cards"
+                            onScroll={markInteracted}
+                            onWheel={markInteracted}
+                            onMouseDown={markInteracted}
+                            onTouchStart={markInteracted}
+                        >
+                            {projectItems.map((project) => (
+                                <article key={project.title} className="project-card" role="listitem">
+                                    <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" />
+                                    <div className="project-body">
+                                        <h3>{project.title}</h3>
+                                        <p>{project.description}</p>
+                                        <div className="project-footer">
+                                            <ul className="project-tech-list" aria-label={`${project.title} technologies`}>
+                                                {project.technologies.map((technology) => (
+                                                    <li key={technology}>{technology}</li>
+                                                ))}
+                                            </ul>
+                                            <a href={project.href} className="project-link" aria-label={`View ${project.title}`}>
+                                                View Project
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
-                        ))}
+                                </article>
+                            ))}
+                        </div>
+                        <button
+                            type="button"
+                            className="projects-arrow"
+                            aria-label="Scroll projects right"
+                            onClick={() => {
+                                markInteracted();
+                                scrollProjects(1);
+                            }}
+                        >
+                            →
+                        </button>
                     </div>
                 </section>
 
