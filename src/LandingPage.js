@@ -2,8 +2,8 @@ import React from 'react';
 import Header from './components/Header';
 import './LandingPage.css';
 import unityToolkitImage from './images/unitytoolkit.png';
-import steamGameImage from './images/steamgame.png';
-import aspiroImage from './images/aspiro.jpg';
+import steamGameImage from './images/steamgame.jpg';
+import aspiroImage from './images/aspiro.png';
 import pokerImage from './images/poker.jpg';
 
 const skills = [
@@ -60,7 +60,7 @@ const projectItems = [
         href: '#',
     },
     {
-        title: 'Self-Published Steam Game',
+        title: 'Self-Published Horror Game',
         period: 'January 2022 – June 2024',
         description:
             'Released a commercial Steam game that reached 200+ paid downloads in the first month, designing AI behavior trees, dynamic lighting, procedural level generation, and managing production from prototype to post-launch feedback.',
