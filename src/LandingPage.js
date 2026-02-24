@@ -111,14 +111,16 @@ const LandingPage = () => {
                 <div className="project-body">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <ul className="project-tech-list" aria-label={`${project.title} technologies`}>
-                    {project.technologies.map((technology) => (
-                      <li key={technology}>{technology}</li>
-                    ))}
-                  </ul>
-                  <a href={project.href} className="project-link" aria-label={`View ${project.title}`}>
-                    View Project
-                  </a>
+                  <div className="project-footer">
+                    <ul className="project-tech-list" aria-label={`${project.title} technologies`}>
+                      {project.technologies.map((technology) => (
+                        <li key={technology}>{technology}</li>
+                      ))}
+                    </ul>
+                    <a href={project.href} className="project-link" aria-label={`View ${project.title}`}>
+                      View Project
+                    </a>
+                  </div>
                 </div>
               </article>
             ))}
