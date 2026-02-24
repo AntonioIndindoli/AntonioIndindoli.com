@@ -235,11 +235,28 @@ main {
     transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
+.projects-arrow:first-of-type {
+    background: linear-gradient(90deg, rgba(120, 197, 255, 0.082) 0%, rgba(18, 19, 41, 0) 100%);
+}
+
+.projects-arrow:last-of-type {
+    background: linear-gradient(270deg, rgba(120, 197, 255, 0.082) 0%, rgba(18, 19, 41, 0) 100%);
+}
+
 .projects-arrow:hover,
 .projects-arrow:focus-visible {
     border-color: rgba(138, 180, 255, 0.8);
-    background: linear-gradient(90deg, rgba(120, 197, 255, 0.55) 0%, rgba(18, 19, 41, 0) 100%); 
     transform: translateY(-1px);
+}
+
+.projects-arrow:first-of-type:hover,
+.projects-arrow:first-of-type:focus-visible {
+    background: linear-gradient(90deg, rgba(120, 197, 255, 0.55) 0%, rgba(18, 19, 41, 0) 100%);
+}
+
+.projects-arrow:last-of-type:hover,
+.projects-arrow:last-of-type:focus-visible {
+    background: linear-gradient(270deg, rgba(120, 197, 255, 0.55) 0%, rgba(18, 19, 41, 0) 100%);
 }
 
 .projects-grid::-webkit-scrollbar {
