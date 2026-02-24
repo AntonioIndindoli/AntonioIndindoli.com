@@ -94,7 +94,7 @@ const projectItems = [
 const LandingPage = () => {
     const projectsGridRef = useRef(null);
     const lastInteractionRef = useRef(Date.now());
-    const idleDelayMs = 4500;
+    const idleDelayMs = 10000;
 
     const markInteracted = useCallback(() => {
         lastInteractionRef.current = Date.now();
