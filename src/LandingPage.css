@@ -43,6 +43,10 @@ main {
     letter-spacing: 0.03em;
 }
 
+.section-projects {
+    max-width: 100%;
+}
+
 .site-header {
     position: sticky;
     top: 0;
@@ -195,7 +199,7 @@ main {
 .projects-grid {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(280px, 33%);
+    grid-auto-columns: 40%;
     gap: 16px;
     overflow-x: auto;
     overscroll-behavior-x: contain;
@@ -277,11 +281,12 @@ main {
 .project-footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
     gap: 12px;
 }
 
 .project-link {
+    justify-self: right;
     width: fit-content;
     padding: 8px 14px;
     border-radius: 999px;
@@ -369,15 +374,16 @@ main {
     }
 
     .projects-grid {
-        grid-auto-columns: minmax(280px, 70%);
+        grid-auto-columns: 60%;
     }
 }
 
 @media (max-width: 620px) {
+
     main,
     .header-inner {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 22px;
+        padding-right: 22px;
     }
 
     .resume-chip {
@@ -388,4 +394,6 @@ main {
     .projects-grid {
         grid-auto-columns: 86%;
     }
+
+
 }

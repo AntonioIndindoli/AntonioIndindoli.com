@@ -140,7 +140,7 @@ const LandingPage = () => {
           </div>
         </section>
 
-        <section className="section projects" id="projects" aria-labelledby="projects-title">
+        <section className="section-projects" id="projects" aria-labelledby="projects-title">
           <div className="section-intro">
             <h2 id="projects-title">Projects</h2>
           </div>
