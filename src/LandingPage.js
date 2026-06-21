@@ -170,7 +170,7 @@ const LandingPage = () => {
                             <p className="intro-eyebrow">About Me</p>
                             <h1 id="about-title">Antonio Indindoli</h1>
                             <p className="hero-subtitle">
-                                PLACEHOLDER DESCRIPTION
+                                I’m a software developer with experience in web and Unity development, specializing in building tools, games, and platforms. 
                             </p>
                         </div>
                         <div className="contact-grid" aria-label="Contact links">
