@@ -6,14 +6,13 @@ const navLinks = [
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
   { href: '#education', label: 'Education' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#contributions', label: 'Contributions' },
 ];
 
 const Header = () => (
   <header className="site-header">
     <div className="header-inner">
-      <a className="brand" href="#home" aria-label="Antonio Indindoli home">
-        <span className="brand-mark">AI</span>
+      <a className="brand" href="#home">
         <span className="brand-text">Antonio Indindoli</span>
       </a>
       <nav className="main-nav" aria-label="Primary">
@@ -29,7 +28,7 @@ const Header = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Resume
+        View Resume
       </a>
     </div>
   </header>
