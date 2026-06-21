@@ -170,9 +170,7 @@ const LandingPage = () => {
                             <p className="intro-eyebrow">About Me</p>
                             <h1 id="about-title">Antonio Indindoli</h1>
                             <p className="hero-subtitle">
-                                I’m a software developer who builds games and web applications. I’ve shipped projects
-                                using C#, JavaScript, React, Node.js, and Unity, and I’m comfortable working across
-                                the stack from backend systems to front-end interfaces.
+                                PLACEHOLDER DESCRIPTION
                             </p>
                         </div>
                         <div className="contact-grid" aria-label="Contact links">
