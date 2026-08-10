@@ -503,7 +503,10 @@ main {
     }
 
     .projects-grid {
-        grid-auto-columns: 86%;
+        grid-auto-columns: 85%;
+        margin-inline: -22px;
+        padding: 8px 22px 18px;
+        scroll-padding-inline: 22px;
     }
 
     .project-footer {
@@ -530,11 +533,8 @@ main {
         align-self: flex-start;
     }
 
-    .projects-arrow {
+    .projects-arrow-left,
+    .projects-arrow-right {
         display: none;
-    }
-
-    .projects-scroller {
-        position: static;
     }
 }

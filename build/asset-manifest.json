@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.2635a53a.css",
-    "main.js": "/static/js/main.0240f8df.js",
-    "static/media/mayunays.netlogo.png": "/static/media/mayunays.netlogo.14ee7e8eb7f66a4f2597.png",
+    "main.css": "/static/css/main.b8ca41e1.css",
+    "main.js": "/static/js/main.d1555cda.js",
+    "static/media/aspiro.png": "/static/media/aspiro.e09c7c342dddf11f8941.png",
+    "static/media/unitytoolkit.png": "/static/media/unitytoolkit.f57fb47ce678642b0999.png",
+    "static/media/poker.jpg": "/static/media/poker.315c2e563f10fcd79ac4.jpg",
+    "static/media/steamgame.jpg": "/static/media/steamgame.60f211fa3ab5ccb06af8.jpg",
     "index.html": "/index.html",
-    "main.2635a53a.css.map": "/static/css/main.2635a53a.css.map",
-    "main.0240f8df.js.map": "/static/js/main.0240f8df.js.map"
+    "main.b8ca41e1.css.map": "/static/css/main.b8ca41e1.css.map",
+    "main.d1555cda.js.map": "/static/js/main.d1555cda.js.map"
   },
   "entrypoints": [
-    "static/css/main.2635a53a.css",
-    "static/js/main.0240f8df.js"
+    "static/css/main.b8ca41e1.css",
+    "static/js/main.d1555cda.js"
   ]
 }
