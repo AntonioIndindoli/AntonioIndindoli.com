@@ -1,4 +1,5 @@
 import React from 'react';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import '../LandingPage.css';
 
 const navLinks = [
@@ -12,9 +13,6 @@ const navLinks = [
 const Header = () => (
   <header className="site-header">
     <div className="header-inner">
-      <a className="brand" href="#home">
-        <span className="brand-text">Antonio Indindoli</span>
-      </a>
       <nav className="main-nav" aria-label="Primary">
         {navLinks.map((link) => (
           <a key={link.href} href={link.href} className="nav-link">
@@ -28,6 +26,7 @@ const Header = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
+        <DescriptionOutlinedIcon sx={{ fontSize: '1.15em' }} aria-hidden="true" />
         View Resume
       </a>
     </div>

@@ -1,48 +1,75 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React from 'react';
+import MailOutlineRounded from '@mui/icons-material/MailOutlineRounded';
+import LocalPhoneOutlined from '@mui/icons-material/LocalPhoneOutlined';
+import LinkedIn from '@mui/icons-material/LinkedIn';
+import GitHub from '@mui/icons-material/GitHub';
+import SchoolRounded from '@mui/icons-material/SchoolRounded';
+import LocationOnRounded from '@mui/icons-material/LocationOnRounded';
 import Header from './components/Header';
+import useScrollReveal from './useScrollReveal';
 import './LandingPage.css';
 import unityToolkitImage from './images/unitytoolkit.png';
 import steamGameImage from './images/steamgame.jpg';
 import aspiroImage from './images/aspiro.png';
-import pokerImage from './images/poker.jpg';
+import pokerImage from './images/poker.png';
+import jobHazelImage from './images/jobhazel.png';
+import mayunsImage from './images/mayuns.png';
+import jobHazelLogo from './images/logos/jobhazel-logo.png';
+import toolkitLogo from './images/logos/dsb-logo.png';
+import backroomsLogo from './images/logos/backrooms-logo.png';
+import aspiroLogo from './images/logos/aspiro-logo.png';
+import pokerLogo from './images/logos/poker-logo.png';
+import mayunsLogo from './images/logos/mayuns-logo.png';
 
 const skills = [
     {
         title: 'Languages',
-        items: ['C#', 'Java', 'JavaScript', 'SQL'],
+        items: ['TypeScript', 'JavaScript', 'C#', 'Java', 'SQL'],
     },
     {
-        title: 'Frameworks',
-        items: ['React', 'Express.js', 'Node.js'],
+        title: 'Frontend',
+        items: ['React', 'Next.js', 'HTML & CSS', 'Tailwind CSS', 'Responsive design'],
     },
     {
-        title: 'Tools & Platforms',
-        items: ['Git', 'MongoDB', 'AWS', 'Google Cloud', 'Unity', 'Visual Studio Code'],
+        title: 'Backend & APIs',
+        items: ['Node.js', 'Express', 'REST APIs', 'WebSockets', 'System design'],
     },
     {
-        title: 'Core Skills',
-        items: ['Web development', 'Game development', 'System design'],
+        title: 'Databases',
+        items: ['PostgreSQL', 'MongoDB', 'Prisma', 'Data modeling'],
+    },
+    {
+        title: 'Game Development',
+        items: ['Unity', 'Custom editor tools', 'AI behavior trees', 'Procedural generation'],
+    },
+    {
+        title: 'Tools & Cloud',
+        items: ['Git', 'Google Cloud', 'AWS', 'Render', 'Neon'],
     },
 ];
 
 const contactItems = [
     {
         label: 'Email',
+        icon: MailOutlineRounded,
         value: 'indindoliantonio@gmail.com',
         href: 'mailto:indindoliantonio@gmail.com',
     },
     {
         label: 'Phone',
+        icon: LocalPhoneOutlined,
         value: '707-372-3995',
         href: 'tel:+17073723995',
     },
     {
         label: 'LinkedIn',
+        icon: LinkedIn,
         value: 'linkedin.com/in/indindoli',
         href: 'https://linkedin.com/in/indindoli',
     },
     {
         label: 'GitHub',
+        icon: GitHub,
         value: 'github.com/AntonioIndindoli',
         href: 'https://github.com/AntonioIndindoli',
     },
@@ -50,228 +77,177 @@ const contactItems = [
 
 const projectItems = [
     {
-        title: 'Self-Published Unity Editor Toolkit',
-        period: 'January 2024 – October 2025',
-        description:
-            'Built and self-published a Unity toolkit featuring a graph-based destruction system for realistic collapse and stress propagation, plus custom editor tooling and thorough documentation to improve developer workflows.',
+        title: 'JobHazel',
+        logo: jobHazelLogo,
+        result: 'Application tracking, follow-ups, and source analytics',
+        description: 'A job search dashboard that brings applications, interviews, contacts, and follow-up tasks into one place.',
+        contribution: 'Built the full-stack app, pipeline APIs, and source analytics.',
+        technologies: ['Next.js', 'TypeScript', 'Express', 'PostgreSQL', 'Prisma'],
+        image: jobHazelImage,
+        imageAlt: 'JobHazel dashboard showing the application pipeline, job search statistics, and application tracker',
+        href: 'https://github.com/AntonioIndindoli/JobHazel',
+        linkLabel: 'View Code',
+        liveHref: 'https://jobhazel.com/',
+    },
+    {
+        title: 'Destructible Structure Builder',
+        logo: toolkitLogo,
+        result: 'Self-published developer tool',
+        description: 'A graph-based destruction toolkit that simulates structural collapse and stress propagation.',
+        contribution: 'Built the destruction system, custom editor tools, and documentation.',
         technologies: ['Unity', 'C#'],
         image: unityToolkitImage,
-        imageAlt: 'Game development tooling and editor workflow on screen',
+        imageAlt: 'A house breaking apart in the Unity destruction toolkit',
         href: 'https://mayuns.com/#/destructible-structure-builder',
+        linkLabel: 'Explore Toolkit',
     },
     {
-        title: 'Self-Published Horror Game',
-        period: 'January 2022 – June 2024',
-        description:
-            'Released a commercial Steam game that reached 200+ paid downloads in the first month, designing AI behavior trees, dynamic lighting, procedural level generation, and managing production from prototype to post-launch feedback.',
+        title: 'Backrooms: Unseen Tapes',
+        logo: backroomsLogo,
+        result: '200+ paid downloads in the first month',
+        description: 'A self-published Steam horror game with procedural levels and stealth mechanics.',
+        contribution: 'Built AI, lighting, and procedural levels; led the Steam release.',
         technologies: ['Unity', 'C#'],
         image: steamGameImage,
-        imageAlt: 'Published indie game experience with immersive environment',
+        imageAlt: 'A dimly lit corridor in Backrooms: Unseen Tapes',
         href: 'https://mayuns.com/#/backrooms-unseen-tapes',
+        linkLabel: 'Explore Game',
     },
     {
-        title: 'University-Athlete Matching Platform',
-        period: 'August 2024 – December 2024',
-        description:
-            'Collaborated in a 4-person Agile team to build an athlete-university matching platform, owning backend REST APIs, data modeling, GCP deployment, Google Maps integration, and a custom ranking algorithm built from 5,000+ Olympian data points.',
-        technologies: ['React.js', 'Next.js', 'SQL', 'Google Cloud'],
+        title: 'Aspiro',
+        logo: aspiroLogo,
+        result: 'Ranking built from 5,000+ Olympian data points',
+        description: 'A platform matching athletes with universities, built in a four-person Agile team.',
+        contribution: 'Owned APIs, data models, athlete ranking, and cloud deployment.',
+        technologies: ['React', 'Next.js', 'SQL', 'Google Cloud'],
         image: aspiroImage,
-        imageAlt: 'Team collaborating on a web platform with map-based planning',
+        imageAlt: 'Aspiro athlete matching platform preview',
         href: 'https://github.com/AntonioIndindoli/Aspiro',
+        linkLabel: 'View Code',
     },
     {
-        title: 'Online Poker Platform',
-        period: 'February 2023 – May 2023',
-        description:
-            'Developed a full-stack multiplayer poker platform in a 3-person Agile team, leading WebSocket implementation for real-time gameplay, chat, and synchronized game state while supporting scalable PostgreSQL data and session design.',
+        title: 'Online Poker',
+        logo: pokerLogo,
+        result: 'Real-time gameplay and synchronized state',
+        description: 'Multiplayer poker with live chat, built in a three-person Agile team.',
+        contribution: 'Led gameplay and chat WebSockets; contributed to session design.',
         technologies: ['Node.js', 'WebSockets', 'PostgreSQL'],
         image: pokerImage,
-        imageAlt: 'Multiplayer card game interface displayed on monitor',
-        href: 'https://github.com/csc-667-spring-2023-roberts/team-zed-repo',
+        imageAlt: 'Poker project preview',
+        href: 'https://github.com/AntonioIndindoli/Texas-Holdem-Poker',
+        linkLabel: 'View Code',
+    },
+    {
+        title: 'Mayuns',
+        logo: mayunsLogo,
+        result: 'A dedicated home for my studio’s games and tools',
+        description: 'My game studio’s website for published games, Unity tools, and product support.',
+        contribution: 'Designed and built the React site and product pages.',
+        technologies: ['React', 'JavaScript', 'CSS', 'React Router'],
+        image: mayunsImage,
+        imageAlt: 'Mayuns game development studio website preview',
+        href: 'https://github.com/AntonioIndindoli/Mayuns-Company-Site',
+        linkLabel: 'View Code',
+        liveHref: 'https://mayuns.com/',
     },
 ];
 
 const LandingPage = () => {
-    const projectsGridRef = useRef(null);
-    const lastInteractionRef = useRef(Date.now());
-    const idleDelayMs = 10000;
-    const [canScrollLeft, setCanScrollLeft] = useState(false);
-    const [canScrollRight, setCanScrollRight] = useState(true);
-
-    const updateArrowVisibility = useCallback(() => {
-        const grid = projectsGridRef.current;
-
-        if (!grid) {
-            return;
-        }
-
-        const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
-        const epsilon = 2;
-
-        setCanScrollLeft(grid.scrollLeft > epsilon);
-        setCanScrollRight(grid.scrollLeft < maxScrollLeft - epsilon);
-    }, []);
-
-    const markInteracted = useCallback(() => {
-        lastInteractionRef.current = Date.now();
-    }, []);
-
-    const scrollProjects = useCallback((direction = 1) => {
-        const grid = projectsGridRef.current;
-
-        if (!grid) {
-            return;
-        }
-
-        const card = grid.querySelector('.project-card');
-        const cardWidth = card ? card.getBoundingClientRect().width : grid.clientWidth * 0.75;
-        const style = window.getComputedStyle(grid);
-        const gap = parseFloat(style.columnGap || style.gap || '0') || 0;
-        const step = (cardWidth + gap) * direction;
-        const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
-
-        if (direction > 0 && grid.scrollLeft >= maxScrollLeft - 4) {
-            return;
-        }
-
-        if (direction < 0 && grid.scrollLeft <= 4) {
-            return;
-        }
-
-        grid.scrollBy({ left: step, behavior: 'smooth' });
-    }, []);
-
-    useEffect(() => {
-        const interval = window.setInterval(() => {
-            if (Date.now() - lastInteractionRef.current >= idleDelayMs) {
-                scrollProjects(1);
-            }
-        }, 2200);
-
-        return () => window.clearInterval(interval);
-    }, [scrollProjects]);
-
-    useEffect(() => {
-        updateArrowVisibility();
-        window.addEventListener('resize', updateArrowVisibility);
-
-        return () => {
-            window.removeEventListener('resize', updateArrowVisibility);
-        };
-    }, [updateArrowVisibility]);
-
+    const revealRoot = useScrollReveal();
     return (
-        <div className="landing-page" id="home">
+        <div className="landing-page" id="home" ref={revealRoot}>
+            <div className="ambient-glow" aria-hidden="true" />
             <Header />
             <main>
                 <section className="hero section" id="about" aria-labelledby="about-title">
                     <div className="hero-content">
-                        <div className="about-hero-intro">
-                            <p className="intro-eyebrow">About Me</p>
-                            <h1 id="about-title">Antonio Indindoli</h1>
-                            <p className="hero-subtitle">
-                                I’m a software developer with experience in web and Unity development, specializing in building tools, games, and platforms. 
-                            </p>
-                        </div>
-                        <div className="contact-grid" aria-label="Contact links">
+                    <div className="about-hero-intro">
+                        <h1 id="about-title">Antonio Indindoli</h1>
+                        <p className="hero-subtitle">
+                            I am a recent computer science graduate and software developer with experience building and shipping full-stack web applications, developer tools, and games. My work includes a job search platform, a graph-based structural destruction toolkit for Unity, and a published Steam game. I’ve built backend APIs, designed databases, and developed real-time multiplayer systems, both independently and on collaborative teams. I enjoy solving challenging technical problems and taking products from an initial idea through development, deployment, and release.
+                        </p>
+                    </div>
+                        <div className="contact-panel">
+                        <section className="connect-card" aria-labelledby="connect-title">
+                            <div className="contact-links" aria-label="Contact links">
                             {contactItems.map((item) => (
                                 <a
                                     key={item.label}
-                                    className="contact-card"
                                     href={item.href}
+                                    aria-label={`${item.label}: ${item.value}`}
                                     target={item.href.startsWith('http') ? '_blank' : undefined}
                                     rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                                 >
+                                    <item.icon className="contact-icon" aria-hidden="true" />
                                     <span className="contact-label">{item.label}</span>
                                     <span className="contact-value">{item.value}</span>
                                 </a>
                             ))}
+                            </div>
+                        </section>
+                        <section className="contact-education section" id="education" aria-labelledby="education-title">
+                            <SchoolRounded className="contact-education-icon" aria-hidden="true" />
+                            <div>
+                                <h2 id="education-title">Education</h2>
+                                <p>Bachelor of Science in Computer Science</p>
+                            </div>
+                        </section>
+                        <section className="contact-location section" id="location" aria-labelledby="location-title">
+                            <LocationOnRounded className="contact-location-icon" aria-hidden="true" />
+                            <div>
+                                <h2 id="location-title">Location</h2>
+                                <p>San Francisco Bay Area, California</p>
+                            </div>
+                        </section>
                         </div>
                     </div>
                 </section>
 
-                <section className="section-projects" id="projects" aria-labelledby="projects-title">
+                <section className="section section-projects" id="projects" aria-labelledby="projects-title">
                     <div className="section-intro projects-intro">
-                        <h2 id="projects-title">Projects</h2>
+                        <h2 id="projects-title">Selected Projects</h2>
+                        <p>Published products and collaborative builds.</p>
                     </div>
-                    <div className="projects-scroller" aria-label="Project carousel controls">
-                        {canScrollLeft && (
-                            <button
-                                type="button"
-                                className="projects-arrow-left"
-                                aria-label="Scroll projects left"
-                                onClick={() => {
-                                    markInteracted();
-                                    scrollProjects(-1);
-                                }}
-                            >
-                                ‹
-                            </button>
-                        )}
-                        <div
-                            ref={projectsGridRef}
-                            className="projects-grid"
-                            role="list"
-                            aria-label="Featured project cards"
-                            onScroll={() => {
-                                markInteracted();
-                                updateArrowVisibility();
-                            }}
-                            onWheel={markInteracted}
-                            onMouseDown={markInteracted}
-                            onTouchStart={markInteracted}
-                        >
-                            {projectItems.map((project) => (
-                                <article key={project.title} className="project-card" role="listitem">
+                    <div className="projects-grid">
+                        {projectItems.map((project) => (
+                            <article key={project.title} className="project-card">
+                                <div className="project-media">
                                     <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" />
-                                    <div className="project-body">
-                                        <h3>{project.title}</h3>
-                                        <p>{project.description}</p>
-                                        <div className="project-footer">
-                                            <ul className="project-tech-list" aria-label={`${project.title} technologies`}>
-                                                {project.technologies.map((technology) => (
-                                                    <li key={technology}>{technology}</li>
-                                                ))}
-                                            </ul>
-                                            <a href={project.href} className="project-link" aria-label={`View ${project.title}`}>
-                                                View Project
-                                            </a>
+                                </div>
+                                <div className="project-body">
+                                    <div className="project-topline">
+                                    <div className="project-heading">
+                                        <img src={project.logo} alt="" className="project-logo" loading="lazy" />
+                                        <div>
+                                            <h3>{project.title}</h3>
                                         </div>
                                     </div>
-                                </article>
-                            ))}
-                        </div>
-                        {canScrollRight && (
-                            <button
-                                type="button"
-                                className="projects-arrow-right"
-                                aria-label="Scroll projects right"
-                                onClick={() => {
-                                    markInteracted();
-                                    scrollProjects(1);
-                                }}
-                            >
-                                ›
-                            </button>
-                        )}
+                                    <div className="project-actions">
+                                        {project.liveHref && (
+                                            <a href={project.liveHref} className="project-link" aria-label={`Visit ${project.title} site`}>
+                                                Visit Site <span aria-hidden="true">↗︎</span>
+                                            </a>
+                                        )}
+                                        <a href={project.href} className="project-link" aria-label={`${project.linkLabel}: ${project.title}`}>
+                                            {project.linkLabel} <span aria-hidden="true">↗︎</span>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    <p className="project-result">{project.result}</p>
+                                    <p>{project.description}</p>
+                                    <p className="project-contribution"><strong>My role:</strong> {project.contribution}</p>
+                                    <div className="project-footer">
+                                        <ul className="project-tech-list" aria-label={`${project.title} technologies`}>
+                                            {project.technologies.map((technology) => (
+                                                <li key={technology}>{technology}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                        ))}
                     </div>
                 </section>
-
-                <section className="section education" id="education" aria-labelledby="education-title">
-                    <div className="section-intro">
-                        <h2 id="education-title">Education</h2>
-                    </div>
-                    <div className="education-card">
-                        <div className="education-card-top">
-                            <div>
-                                <h3>San Francisco State University</h3>
-                                <p className="education-degree">B.S. in Computer Science</p>
-                            </div>
-                            <span className="education-status">Graduated May 2025</span>
-                        </div>
-                    </div>
-                </section>
-
                 <section className="section skills" id="skills" aria-labelledby="skills-title">
                     <div className="section-intro">
                         <h2 id="skills-title">Skills</h2>
