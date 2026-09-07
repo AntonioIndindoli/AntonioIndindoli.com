@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.427f0265.css",
-    "main.js": "/static/js/main.3db92e24.js",
+    "main.css": "/static/css/main.dd521244.css",
+    "main.js": "/static/js/main.19c6a99f.js",
     "static/media/unitytoolkit.png": "/static/media/unitytoolkit.fa704b903fbb1556113e.png",
     "static/media/aspiro.png": "/static/media/aspiro.ea2abecb8cf772eef54d.png",
     "static/media/steamgame.jpg": "/static/media/steamgame.60f211fa3ab5ccb06af8.jpg",
@@ -15,11 +15,11 @@
     "static/media/dsb-logo.png": "/static/media/dsb-logo.cb8d2f2cbadb34c4155b.png",
     "static/media/poker-logo.png": "/static/media/poker-logo.13e681067324ca6ae743.png",
     "index.html": "/index.html",
-    "main.427f0265.css.map": "/static/css/main.427f0265.css.map",
-    "main.3db92e24.js.map": "/static/js/main.3db92e24.js.map"
+    "main.dd521244.css.map": "/static/css/main.dd521244.css.map",
+    "main.19c6a99f.js.map": "/static/js/main.19c6a99f.js.map"
   },
   "entrypoints": [
-    "static/css/main.427f0265.css",
-    "static/js/main.3db92e24.js"
+    "static/css/main.dd521244.css",
+    "static/js/main.19c6a99f.js"
   ]
 }

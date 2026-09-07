@@ -66,76 +66,71 @@ const contactItems = [
 const projectItems = [
     {
         title: 'JobHazel',
+        category: 'Full Stack Web App',
         logo: jobHazelLogo,
-        result: 'Application tracking, follow-ups, and source analytics',
-        description: 'A job search dashboard that brings applications, interviews, contacts, and follow-up tasks into one place.',
-        contribution: 'Built the full-stack app, pipeline APIs, and source analytics.',
-        technologies: ['Next.js', 'TypeScript', 'Express', 'PostgreSQL', 'Prisma'],
+        description: "Built a full-stack job-search dashboard that brings applications, interviews, and contacts together, including easy job import and a visual application pipeline.",
+        technologies: ['Next.js', 'Express', 'PostgreSQL', 'Prisma'],
         image: jobHazelImage,
         imageAlt: 'JobHazel dashboard showing the application pipeline, job search statistics, and application tracker',
         href: 'https://github.com/AntonioIndindoli/JobHazel',
-        linkLabel: 'View Code',
+        linkLabel: 'View code',
         liveHref: 'https://jobhazel.com/',
     },
     {
         title: 'Destructible Structure Builder',
+        category: 'Published Developer Toolkit',
         logo: toolkitLogo,
-        result: 'Self-published developer tool',
-        description: 'A graph-based destruction toolkit that simulates structural collapse and stress propagation.',
-        contribution: 'Built the destruction system, custom editor tools, and documentation.',
+        description: "Created and published a graph-based Unity toolkit for structural collapse and stress propagation, including the destruction system, custom editor tools, and documentation.",
         technologies: ['Unity', 'C#'],
         image: unityToolkitImage,
         imageAlt: 'A house breaking apart in the Unity destruction toolkit',
         href: 'https://mayuns.com/#/destructible-structure-builder',
-        linkLabel: 'Explore Toolkit',
-    },
-    {
-        title: 'Backrooms: Unseen Tapes',
-        logo: backroomsLogo,
-        result: '200+ paid downloads in the first month',
-        description: 'A self-published Steam horror game with procedural levels and stealth mechanics.',
-        contribution: 'Built AI, lighting, and procedural levels; led the Steam release.',
-        technologies: ['Unity', 'C#'],
-        image: steamGameImage,
-        imageAlt: 'A dimly lit corridor in Backrooms: Unseen Tapes',
-        href: 'https://mayuns.com/#/backrooms-unseen-tapes',
-        linkLabel: 'Explore Game',
-    },
-    {
-        title: 'Aspiro',
-        logo: aspiroLogo,
-        result: 'Ranking built from 5,000+ Olympian data points',
-        description: 'A platform matching athletes with universities, built in a four-person Agile team.',
-        contribution: 'Owned APIs, data models, athlete ranking, and cloud deployment.',
-        technologies: ['React', 'Next.js', 'SQL', 'Google Cloud'],
-        image: aspiroImage,
-        imageAlt: 'Aspiro athlete matching platform preview',
-        href: 'https://github.com/AntonioIndindoli/Aspiro',
-        linkLabel: 'View Code',
+        linkLabel: 'Explore toolkit',
     },
     {
         title: 'Online Poker',
+        category: 'Multiplayer Web Game',
         logo: pokerLogo,
-        result: 'Real-time gameplay and synchronized state',
-        description: 'Multiplayer poker with live chat, built in a three-person Agile team.',
-        contribution: 'Led gameplay and chat WebSockets; contributed to session design.',
+        description: "Built multiplayer poker with live chat in a three-person team, leading gameplay and chat WebSockets and contributing to session design and synchronized state.",
         technologies: ['Node.js', 'WebSockets', 'PostgreSQL'],
         image: pokerImage,
         imageAlt: 'Poker project preview',
         href: 'https://github.com/AntonioIndindoli/Texas-Holdem-Poker',
-        linkLabel: 'View Code',
+        linkLabel: 'View code',
     },
     {
+        title: 'Backrooms: Unseen Tapes',
+        category: 'Published Steam Game',
+        logo: backroomsLogo,
+        description: "Built and published a Steam horror game with procedural levels, stealth AI, and atmospheric lighting, reaching 200+ paid downloads in its first month.",
+        technologies: ['Unity', 'C#'],
+        image: steamGameImage,
+        imageAlt: 'A dimly lit corridor in Backrooms: Unseen Tapes',
+        href: 'https://mayuns.com/#/backrooms-unseen-tapes',
+        linkLabel: 'Explore game',
+    },
+    {
+        title: 'Aspiro',
+        category: 'Athlete–University Matching Platform',
+        logo: aspiroLogo,
+        description: "Built an athlete–university matching platform in a four-person team, owning APIs, data models, cloud deployment, and rankings based on 5,000+ Olympian data points.",
+        technologies: ['React', 'Next.js', 'SQL', 'Google Cloud'],
+        image: aspiroImage,
+        imageAlt: 'Aspiro athlete matching platform preview',
+        href: 'https://github.com/AntonioIndindoli/Aspiro',
+        linkLabel: 'View code',
+    },
+
+    {
         title: 'Mayuns',
+        category: 'Game Studio Website',
         logo: mayunsLogo,
-        result: 'A dedicated home for my studio’s games and tools',
-        description: 'My game studio’s website for published games, Unity tools, and product support.',
-        contribution: 'Designed and built the React site and product pages.',
+        description: "Designed and built my game studio’s React website, with product pages for published games, Unity tools, and product support.",
         technologies: ['React', 'JavaScript', 'CSS', 'React Router'],
         image: mayunsImage,
         imageAlt: 'Mayuns game development studio website preview',
         href: 'https://github.com/AntonioIndindoli/Mayuns-Company-Site',
-        linkLabel: 'View Code',
+        linkLabel: 'View code',
         liveHref: 'https://mayuns.com/',
     },
 ];
@@ -149,56 +144,56 @@ const LandingPage = () => {
             <main>
                 <section className="hero section" id="about" aria-labelledby="about-title">
                     <div className="hero-content">
-                    <div className="about-hero-intro">
-                        <div className="hero-heading">
-                            <h1 id="about-title">Antonio Indindoli</h1>
-                            <p className="hero-role">Software Developer</p>
-                        </div>
-                        <p className="hero-subtitle">
-                            Recent Computer Science graduate with experience bringing full-stack apps, developer tools, and games from concept to launch.
-                        </p>
-                        <div className="hero-socials" aria-label="Social profiles">
-                            <a href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
-                                <GitHub aria-hidden="true" />
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://linkedin.com/in/indindoli" target="_blank" rel="noopener noreferrer">
-                                <LinkedIn aria-hidden="true" />
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                        <div className="contact-panel">
-                        <section className="contact-location section" id="location" aria-labelledby="location-title">
-                            <LocationOnOutlined className="contact-location-icon" aria-hidden="true" />
-                            <div>
-                                <h2 id="location-title">Based in</h2>
-                                <p>San Francisco Bay Area, CA</p>
+                        <div className="about-hero-intro">
+                            <div className="hero-heading">
+                                <h1 id="about-title">Antonio Indindoli</h1>
+                                <p className="hero-role">Software Developer</p>
                             </div>
-                        </section>
-                        <section className="contact-education section" id="education" aria-labelledby="education-title">
-                            <SchoolRounded className="contact-education-icon" aria-hidden="true" />
-                            <div>
-                                <h2 id="education-title">Education</h2>
-                                <p>B.S. in Computer Science</p>
-                            </div>
-                        </section>
-                        <section className="connect-card" aria-label="Contact information">
-                            <div className="contact-links" aria-label="Contact links">
-                            {contactItems.map((item) => (
-                                <a
-                                    key={item.label}
-                                    href={item.href}
-                                    aria-label={`${item.label}: ${item.value}`}
-                                    target={item.href.startsWith('http') ? '_blank' : undefined}
-                                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                >
-                                    <item.icon className="contact-icon" aria-hidden="true" />
-                                    <span className="contact-value">{item.value}</span>
+                            <p className="hero-subtitle">
+                                Recent Computer Science graduate with experience bringing full-stack apps, developer tools, and games from concept to launch.
+                            </p>
+                            <div className="hero-socials" aria-label="Social profiles">
+                                <a href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
+                                    <GitHub aria-hidden="true" />
+                                    <span>GitHub</span>
                                 </a>
-                            ))}
+                                <a href="https://linkedin.com/in/indindoli" target="_blank" rel="noopener noreferrer">
+                                    <LinkedIn aria-hidden="true" />
+                                    <span>LinkedIn</span>
+                                </a>
                             </div>
-                        </section>
+                        </div>
+                        <div className="contact-panel">
+                            <section className="contact-location section" id="location" aria-labelledby="location-title">
+                                <LocationOnOutlined className="contact-location-icon" aria-hidden="true" />
+                                <div>
+                                    <h2 id="location-title">Based in</h2>
+                                    <p>San Francisco Bay Area, CA</p>
+                                </div>
+                            </section>
+                            <section className="contact-education section" id="education" aria-labelledby="education-title">
+                                <SchoolRounded className="contact-education-icon" aria-hidden="true" />
+                                <div>
+                                    <h2 id="education-title">Education</h2>
+                                    <p>B.S. in Computer Science</p>
+                                </div>
+                            </section>
+                            <section className="connect-card" aria-label="Contact information">
+                                <div className="contact-links" aria-label="Contact links">
+                                    {contactItems.map((item) => (
+                                        <a
+                                            key={item.label}
+                                            href={item.href}
+                                            aria-label={`${item.label}: ${item.value}`}
+                                            target={item.href.startsWith('http') ? '_blank' : undefined}
+                                            rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                        >
+                                            <item.icon className="contact-icon" aria-hidden="true" />
+                                            <span className="contact-value">{item.value}</span>
+                                        </a>
+                                    ))}
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </section>
@@ -211,37 +206,34 @@ const LandingPage = () => {
                     <div className="projects-grid">
                         {projectItems.map((project) => (
                             <article key={project.title} className="project-card">
-                                <div className="project-media">
-                                    <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" />
-                                </div>
                                 <div className="project-body">
-                                    <div className="project-topline">
                                     <div className="project-heading">
                                         <img src={project.logo} alt="" className="project-logo" loading="lazy" />
-                                        <div>
-                                            <h3>{project.title}</h3>
-                                        </div>
+                                        <h3>{project.title}</h3>
                                     </div>
-                                    <div className="project-actions">
-                                        {project.liveHref && (
-                                            <a href={project.liveHref} className="project-link" aria-label={`Visit ${project.title} site`}>
-                                                Visit Site 
-                                            </a>
-                                        )}
-                                        <a href={project.href} className="project-link" aria-label={`${project.linkLabel}: ${project.title}`}>
-                                            {project.linkLabel} 
-                                        </a>
-                                    </div>
-                                    </div>
-                                    <p className="project-result">{project.result}</p>
+                                    <p className="project-category">{project.category}</p>
                                     <p>{project.description}</p>
-                                    <p className="project-contribution"><strong>My role:</strong> {project.contribution}</p>
                                     <div className="project-footer">
-                                        <ul className="project-tech-list" aria-label={`${project.title} technologies`}>
+                                        <ul className="project-tech-list" aria-label={project.title + ' technologies'}>
                                             {project.technologies.map((technology) => (
                                                 <li key={technology}>{technology}</li>
                                             ))}
                                         </ul>
+                                    </div>
+                                </div>
+                                <div className="project-preview">
+                                    <div className="project-media">
+                                        <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" />
+                                    </div>
+                                    <div className="project-actions">
+                                        {project.liveHref && (
+                                            <a href={project.liveHref} className="project-link" aria-label={'Visit ' + project.title + ' site'}>
+                                                Visit site <span aria-hidden="true">↗</span>
+                                            </a>
+                                        )}
+                                        <a href={project.href} className="project-link" aria-label={project.linkLabel + ': ' + project.title}>
+                                            {project.linkLabel} <span aria-hidden="true">↗</span>
+                                        </a>
                                     </div>
                                 </div>
                             </article>
