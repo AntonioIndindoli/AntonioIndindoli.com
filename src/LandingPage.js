@@ -102,7 +102,7 @@ const projectItems = [
         title: 'Backrooms: Unseen Tapes',
         category: 'Published Steam Game',
         logo: backroomsLogo,
-        description: "Built and published a Steam horror game with procedural levels, stealth AI, and atmospheric lighting, reaching 200+ paid downloads in its first month.",
+        description: "Built and published a Steam horror game with procedural levels, stealth AI, and atmospheric lighting, reaching 500+ paid downloads.",
         technologies: ['Unity', 'C#'],
         image: steamGameImage,
         imageAlt: 'A dimly lit corridor in Backrooms: Unseen Tapes',
@@ -150,7 +150,7 @@ const LandingPage = () => {
                                 <p className="hero-role">Software Developer</p>
                             </div>
                             <p className="hero-subtitle">
-                                Recent Computer Science graduate with experience bringing full-stack apps, developer tools, and games from concept to launch.
+                                Software developer with experience bringing full-stack apps, developer tools, and games from concept to launch.
                             </p>
                             <div className="hero-socials" aria-label="Social profiles">
                                 <a href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
