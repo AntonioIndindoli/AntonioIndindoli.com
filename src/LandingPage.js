@@ -4,7 +4,7 @@ import LocalPhoneOutlined from '@mui/icons-material/LocalPhoneOutlined';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 import GitHub from '@mui/icons-material/GitHub';
 import SchoolRounded from '@mui/icons-material/SchoolRounded';
-import LocationOnRounded from '@mui/icons-material/LocationOnRounded';
+import LocationOnOutlined from '@mui/icons-material/LocationOnOutlined';
 import Header from './components/Header';
 import useScrollReveal from './useScrollReveal';
 import './LandingPage.css';
@@ -60,18 +60,6 @@ const contactItems = [
         icon: LocalPhoneOutlined,
         value: '707-372-3995',
         href: 'tel:+17073723995',
-    },
-    {
-        label: 'LinkedIn',
-        icon: LinkedIn,
-        value: 'linkedin.com/in/indindoli',
-        href: 'https://linkedin.com/in/indindoli',
-    },
-    {
-        label: 'GitHub',
-        icon: GitHub,
-        value: 'github.com/AntonioIndindoli',
-        href: 'https://github.com/AntonioIndindoli',
     },
 ];
 
@@ -162,13 +150,40 @@ const LandingPage = () => {
                 <section className="hero section" id="about" aria-labelledby="about-title">
                     <div className="hero-content">
                     <div className="about-hero-intro">
-                        <h1 id="about-title">Antonio Indindoli</h1>
+                        <div className="hero-heading">
+                            <h1 id="about-title">Antonio Indindoli</h1>
+                            <p className="hero-role">Software Developer</p>
+                        </div>
                         <p className="hero-subtitle">
-                            I am a recent computer science graduate and software developer with experience building and shipping full-stack web applications, developer tools, and games. My work includes a job search platform, a graph-based structural destruction toolkit for Unity, and a published Steam game. I’ve built backend APIs, designed databases, and developed real-time multiplayer systems, both independently and on collaborative teams. I enjoy solving challenging technical problems and taking products from an initial idea through development, deployment, and release.
+                            Recent Computer Science graduate with experience bringing full-stack apps, developer tools, and games from concept to launch.
                         </p>
+                        <div className="hero-socials" aria-label="Social profiles">
+                            <a href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
+                                <GitHub aria-hidden="true" />
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/indindoli" target="_blank" rel="noopener noreferrer">
+                                <LinkedIn aria-hidden="true" />
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                         <div className="contact-panel">
-                        <section className="connect-card" aria-labelledby="connect-title">
+                        <section className="contact-location section" id="location" aria-labelledby="location-title">
+                            <LocationOnOutlined className="contact-location-icon" aria-hidden="true" />
+                            <div>
+                                <h2 id="location-title">Based in</h2>
+                                <p>San Francisco Bay Area, CA</p>
+                            </div>
+                        </section>
+                        <section className="contact-education section" id="education" aria-labelledby="education-title">
+                            <SchoolRounded className="contact-education-icon" aria-hidden="true" />
+                            <div>
+                                <h2 id="education-title">Education</h2>
+                                <p>B.S. in Computer Science</p>
+                            </div>
+                        </section>
+                        <section className="connect-card" aria-label="Contact information">
                             <div className="contact-links" aria-label="Contact links">
                             {contactItems.map((item) => (
                                 <a
@@ -179,24 +194,9 @@ const LandingPage = () => {
                                     rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                                 >
                                     <item.icon className="contact-icon" aria-hidden="true" />
-                                    <span className="contact-label">{item.label}</span>
                                     <span className="contact-value">{item.value}</span>
                                 </a>
                             ))}
-                            </div>
-                        </section>
-                        <section className="contact-education section" id="education" aria-labelledby="education-title">
-                            <SchoolRounded className="contact-education-icon" aria-hidden="true" />
-                            <div>
-                                <h2 id="education-title">Education</h2>
-                                <p>Bachelor of Science in Computer Science</p>
-                            </div>
-                        </section>
-                        <section className="contact-location section" id="location" aria-labelledby="location-title">
-                            <LocationOnRounded className="contact-location-icon" aria-hidden="true" />
-                            <div>
-                                <h2 id="location-title">Location</h2>
-                                <p>San Francisco Bay Area, California</p>
                             </div>
                         </section>
                         </div>
@@ -225,11 +225,11 @@ const LandingPage = () => {
                                     <div className="project-actions">
                                         {project.liveHref && (
                                             <a href={project.liveHref} className="project-link" aria-label={`Visit ${project.title} site`}>
-                                                Visit Site <span aria-hidden="true">↗︎</span>
+                                                Visit Site 
                                             </a>
                                         )}
                                         <a href={project.href} className="project-link" aria-label={`${project.linkLabel}: ${project.title}`}>
-                                            {project.linkLabel} <span aria-hidden="true">↗︎</span>
+                                            {project.linkLabel} 
                                         </a>
                                     </div>
                                     </div>

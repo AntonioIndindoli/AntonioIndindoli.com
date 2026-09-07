@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.30fb3bcb.css",
-    "main.js": "/static/js/main.2df6ace9.js",
-    "static/media/backrooms-logo.png": "/static/media/backrooms-logo.0bf2fb622528dd9f7b45.png",
-    "static/media/unitytoolkit.png": "/static/media/unitytoolkit.2805c893e13ff9a50d59.png",
-    "static/media/mayuns.png": "/static/media/mayuns.b6be743a6fae4e2f08fb.png",
-    "static/media/aspiro-logo.png": "/static/media/aspiro-logo.658c51a380735873d5ed.png",
-    "static/media/poker-logo.png": "/static/media/poker-logo.006651f747932cfaad20.png",
-    "static/media/poker.png": "/static/media/poker.220fb3ccbfda180c1ecd.png",
-    "static/media/aspiro.png": "/static/media/aspiro.05d53ce65287ba6d5167.png",
-    "static/media/dsb-logo.png": "/static/media/dsb-logo.7167d4d4fe95f4444b99.png",
-    "static/media/jobhazel-logo.png": "/static/media/jobhazel-logo.bf51eb0404cef8bd01a9.png",
-    "static/media/jobhazel.png": "/static/media/jobhazel.26f2924d983e308a9483.png",
+    "main.css": "/static/css/main.427f0265.css",
+    "main.js": "/static/js/main.3db92e24.js",
+    "static/media/unitytoolkit.png": "/static/media/unitytoolkit.fa704b903fbb1556113e.png",
+    "static/media/aspiro.png": "/static/media/aspiro.ea2abecb8cf772eef54d.png",
     "static/media/steamgame.jpg": "/static/media/steamgame.60f211fa3ab5ccb06af8.jpg",
-    "static/media/mayuns-logo.png": "/static/media/mayuns-logo.ca7dfc5cbc5143537bcf.png",
+    "static/media/poker.png": "/static/media/poker.083240c9ba24e38f46c6.png",
+    "static/media/mayuns.png": "/static/media/mayuns.42754b6766dcf076aa2b.png",
+    "static/media/jobhazel.png": "/static/media/jobhazel.f57511939e346ec0fd47.png",
+    "static/media/aspiro-logo.png": "/static/media/aspiro-logo.2ff5818e4f7df22962ee.png",
+    "static/media/jobhazel-logo.png": "/static/media/jobhazel-logo.24d3d60396158d11cc61.png",
+    "static/media/backrooms-logo.png": "/static/media/backrooms-logo.0aa5bbf0315e28ca3f5c.png",
+    "static/media/mayuns-logo.png": "/static/media/mayuns-logo.3a2bd712e35d0b1553d3.png",
+    "static/media/dsb-logo.png": "/static/media/dsb-logo.cb8d2f2cbadb34c4155b.png",
+    "static/media/poker-logo.png": "/static/media/poker-logo.13e681067324ca6ae743.png",
     "index.html": "/index.html",
-    "main.30fb3bcb.css.map": "/static/css/main.30fb3bcb.css.map",
-    "main.2df6ace9.js.map": "/static/js/main.2df6ace9.js.map"
+    "main.427f0265.css.map": "/static/css/main.427f0265.css.map",
+    "main.3db92e24.js.map": "/static/js/main.3db92e24.js.map"
   },
   "entrypoints": [
-    "static/css/main.30fb3bcb.css",
-    "static/js/main.2df6ace9.js"
+    "static/css/main.427f0265.css",
+    "static/js/main.3db92e24.js"
   ]
 }

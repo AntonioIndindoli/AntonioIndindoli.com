@@ -1,18 +1,24 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 
-// Content stays visible until the observer is ready, and remains visible once seen.
+// Prepare hidden states before paint; keyframes start when each item enters view.
 export default function useScrollReveal() {
     const root = useRef(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const container = root.current;
         const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
         if (!container || !('IntersectionObserver' in window)) return undefined;
 
         const elements = Array.from(container.querySelectorAll(
-            '.section-intro, .project-card, .skill-card, .contribution-chart'
+            '.nav-toggle, .main-nav .nav-link, .resume-chip, ' +
+            '.hero-heading > *, .hero-subtitle, .hero-socials > a, ' +
+            '.contact-panel > section, .section-intro > *, ' +
+            '.project-card, .skill-card, .contribution-chart'
         ));
         const reveal = (element) => {
+            if (element.classList.contains('reveal-pending') && !preference.matches) {
+                element.classList.add('reveal-visible');
+            }
             element.classList.remove('reveal-pending');
             observer.unobserve(element);
         };
@@ -40,7 +46,9 @@ export default function useScrollReveal() {
         container.addEventListener('focusin', onFocus);
         return () => {
             observer.disconnect();
-            elements.forEach((element) => element.classList.remove('reveal-pending'));
+            elements.forEach((element) => element.classList.remove(
+                'scroll-reveal', 'reveal-pending', 'reveal-visible'
+            ));
             preference.removeEventListener('change', onPreferenceChange);
             container.removeEventListener('focusin', onFocus);
         };

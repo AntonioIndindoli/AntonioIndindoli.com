@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import '../LandingPage.css';
 
 const navLinks = [
@@ -10,12 +12,36 @@ const navLinks = [
   { href: '#contributions', label: 'Contributions' },
 ];
 
-const Header = () => (
-  <header className="site-header">
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuButton = useRef(null);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    menuButton.current?.focus();
+  };
+
+  return (
+  <header className="site-header" onKeyDown={(event) => {
+    if (event.key === 'Escape' && menuOpen) closeMenu();
+  }}>
     <div className="header-inner">
-      <nav className="main-nav" aria-label="Primary">
+      <button
+        ref={menuButton}
+        type="button"
+        className="nav-toggle"
+        aria-expanded={menuOpen}
+        aria-controls="primary-navigation"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? <CloseRoundedIcon aria-hidden="true" /> : <MenuRoundedIcon aria-hidden="true" />}
+        {menuOpen ? 'Close' : ''}
+      </button>
+      <nav id="primary-navigation" className={`main-nav${menuOpen ? ' is-open' : ''}`} aria-label="Primary">
         {navLinks.map((link) => (
-          <a key={link.href} href={link.href} className="nav-link">
+          <a key={link.href} href={link.href} className="nav-link" onClick={() => {
+            if (menuOpen) closeMenu();
+          }}>
             {link.label}
           </a>
         ))}
@@ -31,6 +57,7 @@ const Header = () => (
       </a>
     </div>
   </header>
-);
+  );
+};
 
 export default Header;
