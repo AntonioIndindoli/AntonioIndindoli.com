@@ -201,7 +201,6 @@ const LandingPage = () => {
                 <section className="section section-projects" id="projects" aria-labelledby="projects-title">
                     <div className="section-intro projects-intro">
                         <h2 id="projects-title">Selected Projects</h2>
-                        <p>Published products and collaborative builds.</p>
                     </div>
                     <div className="projects-grid">
                         {projectItems.map((project) => (
