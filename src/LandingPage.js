@@ -68,10 +68,12 @@ const projectItems = [
         title: 'JobHazel',
         category: 'Full Stack Web App',
         logo: jobHazelLogo,
-        description: "Built a full-stack job-search dashboard that brings applications, interviews, and contacts together, including easy job import and a visual application pipeline.",
+        description:
+            'A full-stack job application tracker with job importing, resume management, interactive analytics, and a visual pipeline for organizing applications and interviews.',
         technologies: ['Next.js', 'Express', 'PostgreSQL', 'Prisma'],
         image: jobHazelImage,
-        imageAlt: 'JobHazel dashboard showing the application pipeline, job search statistics, and application tracker',
+        imageAlt:
+            'JobHazel dashboard showing the application pipeline, job search statistics, and application tracker',
         href: 'https://github.com/AntonioIndindoli/JobHazel',
         linkLabel: 'View code',
         liveHref: 'https://jobhazel.com/',
@@ -80,7 +82,8 @@ const projectItems = [
         title: 'Destructible Structure Builder',
         category: 'Published Developer Toolkit',
         logo: toolkitLogo,
-        description: "Created and published a graph-based Unity toolkit for structural collapse and stress propagation, including the destruction system, custom editor tools, and documentation.",
+        description:
+            'A published Unity toolkit that uses graph-based modeling to simulate structural damage and collapse, with custom 3D tools, a damage API, automated tests, and documentation.',
         technologies: ['Unity', 'C#'],
         image: unityToolkitImage,
         imageAlt: 'A house breaking apart in the Unity destruction toolkit',
@@ -91,7 +94,8 @@ const projectItems = [
         title: 'Online Poker',
         category: 'Multiplayer Web Game',
         logo: pokerLogo,
-        description: "Built multiplayer poker with live chat in a three-person team, leading gameplay and chat WebSockets and contributing to session design and synchronized state.",
+        description:
+            'A real-time multiplayer poker platform with server-side betting and game logic, synchronized table state and chat, and persistent game data in PostgreSQL.',
         technologies: ['Node.js', 'WebSockets', 'PostgreSQL'],
         image: pokerImage,
         imageAlt: 'Poker project preview',
@@ -102,7 +106,8 @@ const projectItems = [
         title: 'Backrooms: Unseen Tapes',
         category: 'Published Steam Game',
         logo: backroomsLogo,
-        description: "Built and published a Steam horror game with procedural levels, stealth AI, and atmospheric lighting, reaching 500+ paid downloads.",
+        description:
+            'A published Unity horror game featuring stealth mechanics, procedural level generation, and optimized scenes with large numbers of dynamic lights and objects.',
         technologies: ['Unity', 'C#'],
         image: steamGameImage,
         imageAlt: 'A dimly lit corridor in Backrooms: Unseen Tapes',
@@ -113,19 +118,20 @@ const projectItems = [
         title: 'Aspiro',
         category: 'Athlete–University Matching Platform',
         logo: aspiroLogo,
-        description: "Built an athlete–university matching platform in a four-person team, owning APIs, data models, cloud deployment, and rankings based on 5,000+ Olympian data points.",
+        description:
+            'A full-stack athlete–university matching platform with a custom ranking algorithm, backend APIs, SQL data models, Google Cloud deployment, and location-based university discovery.',
         technologies: ['React', 'Next.js', 'SQL', 'Google Cloud'],
         image: aspiroImage,
         imageAlt: 'Aspiro athlete matching platform preview',
         href: 'https://github.com/AntonioIndindoli/Aspiro',
         linkLabel: 'View code',
     },
-
     {
         title: 'Mayuns',
         category: 'Game Studio Website',
         logo: mayunsLogo,
-        description: "Designed and built my game studio’s React website, with product pages for published games, Unity tools, and product support.",
+        description:
+            'A responsive website for my game studio, designed to showcase published games and Unity tools with dedicated product pages and support resources.',
         technologies: ['React', 'JavaScript', 'CSS', 'React Router'],
         image: mayunsImage,
         imageAlt: 'Mayuns game development studio website preview',
@@ -147,7 +153,6 @@ const LandingPage = () => {
                         <div className="about-hero-intro">
                             <div className="hero-heading">
                                 <h1 id="about-title">Antonio Indindoli</h1>
-                                <p className="hero-role">Software Developer</p>
                             </div>
                             <p className="hero-subtitle">
                                 Software developer with experience bringing full-stack apps, developer tools, and games from concept to launch.
@@ -207,7 +212,6 @@ const LandingPage = () => {
                             <article key={project.title} className="project-card">
                                 <div className="project-body">
                                     <div className="project-heading">
-                                        <img src={project.logo} alt="" className="project-logo" loading="lazy" />
                                         <h3>{project.title}</h3>
                                     </div>
                                     <p className="project-category">{project.category}</p>
