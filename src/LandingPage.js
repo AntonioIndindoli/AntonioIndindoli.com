@@ -145,14 +145,15 @@ const LandingPage = () => {
     const revealRoot = useScrollReveal();
     return (
         <div className="landing-page" id="home" ref={revealRoot}>
-            <div className="ambient-glow" aria-hidden="true" />
+            <a className="skip-link" href="#main-content">Skip to content</a>
             <Header />
-            <main>
+            <main id="main-content">
                 <section className="hero section" id="about" aria-labelledby="about-title">
                     <div className="hero-content">
                         <div className="about-hero-intro">
                             <div className="hero-heading">
-                                <h1 id="about-title">Antonio Indindoli</h1>
+                                <p className="intro-eyebrow">Software developer</p>
+                                <h1 id="about-title">Antonio<br />Indindoli</h1>
                             </div>
                             <p className="hero-subtitle">
                                 Software developer with experience bringing full-stack apps, developer tools, and games from concept to launch.
@@ -205,7 +206,7 @@ const LandingPage = () => {
 
                 <section className="section section-projects" id="projects" aria-labelledby="projects-title">
                     <div className="section-intro projects-intro">
-                        <h2 id="projects-title">Selected Projects</h2>
+                        <h2 id="projects-title">Projects</h2>
                     </div>
                     <div className="projects-grid">
                         {projectItems.map((project) => (
@@ -264,17 +265,22 @@ const LandingPage = () => {
                 <section className="section contributions" id="contributions" aria-labelledby="contributions-title">
                     <div className="section-intro">
                         <h2 id="contributions-title">GitHub Contributions</h2>
+                        <a className="text-link" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">View profile <span aria-hidden="true">↗</span></a>
                     </div>
                     <div className="contribution-chart">
                         <img
-                            src="https://ghchart.rshah.org/39d353/AntonioIndindoli"
+                            src="https://ghchart.rshah.org/246b4b/AntonioIndindoli"
                             alt="Antonio Indindoli’s GitHub contribution chart"
                         />
                     </div>
                 </section>
+                <footer className="site-footer">
+                    <div className="footer-signoff"><span>Antonio Indindoli</span><span>Software developer · San Francisco Bay Area</span><a href="#home">Back to top ↑</a></div>
+                </footer>
             </main>
         </div>
     );
 };
 
 export default LandingPage;
+

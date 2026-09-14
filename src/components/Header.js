@@ -31,6 +31,7 @@ const Header = () => {
         className="nav-toggle"
         aria-expanded={menuOpen}
         aria-controls="primary-navigation"
+        aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         {menuOpen ? <CloseRoundedIcon aria-hidden="true" /> : <MenuRoundedIcon aria-hidden="true" />}
