@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MailOutlineRounded from '@mui/icons-material/MailOutlineRounded';
 import LocalPhoneOutlined from '@mui/icons-material/LocalPhoneOutlined';
 import LinkedIn from '@mui/icons-material/LinkedIn';
@@ -143,6 +143,7 @@ const projectItems = [
 
 const LandingPage = () => {
     const revealRoot = useScrollReveal();
+    const [chartUnavailable, setChartUnavailable] = useState(false);
     return (
         <div className="landing-page" id="home" ref={revealRoot}>
             <a className="skip-link" href="#main-content">Skip to content</a>
@@ -152,7 +153,6 @@ const LandingPage = () => {
                     <div className="hero-content">
                         <div className="about-hero-intro">
                             <div className="hero-heading">
-                                <p className="intro-eyebrow">Software developer</p>
                                 <h1 id="about-title">Antonio<br />Indindoli</h1>
                             </div>
                             <p className="hero-subtitle">
@@ -206,7 +206,9 @@ const LandingPage = () => {
 
                 <section className="section section-projects" id="projects" aria-labelledby="projects-title">
                     <div className="section-intro projects-intro">
-                        <h2 id="projects-title">Projects</h2>
+                        <div>
+                            <h2 id="projects-title">Projects</h2>
+                        </div>
                     </div>
                     <div className="projects-grid">
                         {projectItems.map((project) => (
@@ -246,7 +248,9 @@ const LandingPage = () => {
                 </section>
                 <section className="section skills" id="skills" aria-labelledby="skills-title">
                     <div className="section-intro">
-                        <h2 id="skills-title">Skills</h2>
+                        <div>
+                            <h2 id="skills-title">Skills</h2>
+                        </div>
                     </div>
                     <div className="skills-grid">
                         {skills.map((category) => (
@@ -264,14 +268,24 @@ const LandingPage = () => {
 
                 <section className="section contributions" id="contributions" aria-labelledby="contributions-title">
                     <div className="section-intro">
-                        <h2 id="contributions-title">GitHub Contributions</h2>
+                        <div>
+                            <h2 id="contributions-title">GitHub Contributions</h2>
+                        </div>
                         <a className="text-link" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">View profile <span aria-hidden="true">↗</span></a>
                     </div>
                     <div className="contribution-chart">
-                        <img
-                            src="https://ghchart.rshah.org/246b4b/AntonioIndindoli"
-                            alt="Antonio Indindoli’s GitHub contribution chart"
-                        />
+                        {chartUnavailable ? (
+                            <p className="contribution-fallback">
+                                The contribution chart is currently unavailable.{' '}
+                                <a href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">See activity on GitHub <span aria-hidden="true">↗</span></a>
+                            </p>
+                        ) : (
+                            <img
+                                src="https://ghchart.rshah.org/246b4b/AntonioIndindoli"
+                                alt="Antonio Indindoli’s GitHub contribution chart"
+                                onError={() => setChartUnavailable(true)}
+                            />
+                        )}
                     </div>
                 </section>
                 <footer className="site-footer">
@@ -283,4 +297,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-

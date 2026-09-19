@@ -4,13 +4,12 @@
 body {
   margin: 0;
   font-family: 'Manrope', 'Segoe UI', sans-serif;
-  background: #f2f5f3;
-  color: #202b25;
+  background: #202724;
+  color: #f1f0e8;
   -webkit-font-smoothing: antialiased;
 }
-::selection { background: #246b4b; color: #ffffff; }
+::selection { background: #b5d8ad; color: #202c22; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 button { font: inherit; }
 main { width: 100%; }
-
