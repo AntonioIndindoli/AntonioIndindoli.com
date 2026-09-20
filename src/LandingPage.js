@@ -153,7 +153,7 @@ const LandingPage = () => {
                     <div className="hero-content">
                         <div className="about-hero-intro">
                             <div className="hero-heading">
-                                <h1 id="about-title">Antonio<br />Indindoli</h1>
+                                <h1 id="about-title">Antonio<br /><span>Indindoli</span></h1>
                             </div>
                             <p className="hero-subtitle">
                                 Software developer with experience bringing full-stack apps, developer tools, and games from concept to launch.
