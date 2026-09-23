@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.92c2b390.css",
+    "main.css": "/static/css/main.28fe8c4a.css",
     "main.js": "/static/js/main.e568f959.js",
     "static/media/poker.png": "/static/media/poker.3fc10d6707114ec5c6be.png",
     "static/media/unitytoolkit.png": "/static/media/unitytoolkit.fa704b903fbb1556113e.png",
@@ -15,11 +15,11 @@
     "static/media/dsb-logo.png": "/static/media/dsb-logo.cb8d2f2cbadb34c4155b.png",
     "static/media/poker-logo.png": "/static/media/poker-logo.13e681067324ca6ae743.png",
     "index.html": "/index.html",
-    "main.92c2b390.css.map": "/static/css/main.92c2b390.css.map",
+    "main.28fe8c4a.css.map": "/static/css/main.28fe8c4a.css.map",
     "main.e568f959.js.map": "/static/js/main.e568f959.js.map"
   },
   "entrypoints": [
-    "static/css/main.92c2b390.css",
+    "static/css/main.28fe8c4a.css",
     "static/js/main.e568f959.js"
   ]
 }
