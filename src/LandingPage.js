@@ -6,6 +6,7 @@ import GitHub from '@mui/icons-material/GitHub';
 import SchoolRounded from '@mui/icons-material/SchoolRounded';
 import LocationOnOutlined from '@mui/icons-material/LocationOnOutlined';
 import Header from './components/Header';
+import ContributionChartColors from './components/ContributionChartColors';
 import useScrollReveal from './useScrollReveal';
 import './LandingPage.css';
 import unityToolkitImage from './images/unitytoolkit.png';
@@ -153,10 +154,10 @@ const LandingPage = () => {
                     <div className="hero-content">
                         <div className="about-hero-intro">
                             <div className="hero-heading">
-                                <h1 id="about-title">Antonio<br /><span>Indindoli</span></h1>
+                                <h1 id="about-title">Antonio Indindoli</h1>
                             </div>
                             <p className="hero-subtitle">
-                                Software developer with experience bringing full-stack apps, developer tools, and games from concept to launch.
+                                Software developer specializing in full-stack web applications, Unity, and developer tools, with a focus on intuitive, engaging user experiences.
                             </p>
                             <div className="hero-socials" aria-label="Social profiles">
                                 <a href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
@@ -274,6 +275,7 @@ const LandingPage = () => {
                         <a className="text-link" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">View profile <span aria-hidden="true">↗</span></a>
                     </div>
                     <div className="contribution-chart">
+                        <ContributionChartColors />
                         {chartUnavailable ? (
                             <p className="contribution-fallback">
                                 The contribution chart is currently unavailable.{' '}
@@ -281,7 +283,7 @@ const LandingPage = () => {
                             </p>
                         ) : (
                             <img
-                                src="https://ghchart.rshah.org/246b4b/AntonioIndindoli"
+                                src="https://ghchart.rshah.org/AntonioIndindoli"
                                 alt="Antonio Indindoli’s GitHub contribution chart"
                                 onError={() => setChartUnavailable(true)}
                             />

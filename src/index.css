@@ -4,11 +4,11 @@
 body {
   margin: 0;
   font-family: 'Manrope', 'Segoe UI', sans-serif;
-  background: #202724;
-  color: #f1f0e8;
+  background: var(--bg);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
 }
-::selection { background: #b5d8ad; color: #202c22; }
+::selection { background: var(--accent); color: var(--ink); }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 button { font: inherit; }
