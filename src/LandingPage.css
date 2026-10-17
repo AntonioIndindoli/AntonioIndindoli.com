@@ -179,14 +179,52 @@
     font-size: 11px;
 }
 
+.hero-heading {
+    container-type: inline-size;
+}
+
 .about-hero-intro h1 {
     color: var(--text-primary);
     font-family: var(--heading);
-    font-size: clamp(64px, 7.5vw, 80px);
+    font-size: min(80px, 12.5cqw);
     font-weight: 800;
     line-height: 1;
     letter-spacing: -.055em;
     margin: 0;
+    white-space: nowrap;
+}
+
+.typed-name,
+.typed-name-letter {
+    position: relative;
+}
+
+.typed-name-word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.typed-name-word:last-child {
+    padding-right: .5em;
+}
+
+.name-cursor {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    color: inherit;
+    animation: name-cursor-blink 1s step-end infinite;
+}
+
+.name-cursor-start {
+    left: 0;
+    top: 0;
+    bottom: auto;
+}
+
+@keyframes name-cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .hero-subtitle {
@@ -750,10 +788,6 @@
         gap: 34px;
     }
 
-    .about-hero-intro h1 {
-        font-size: clamp(52px, 10vw, 72px);
-    }
-
     .hero-subtitle {
         max-width: 48ch;
         font-size: 16px;
@@ -841,10 +875,6 @@
     .site-mark {
         width: 34px;
         height: 34px;
-    }
-
-    .about-hero-intro h1 {
-        font-size: 50px;
     }
 
     .contact-panel,

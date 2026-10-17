@@ -6,6 +6,7 @@ import GitHub from '@mui/icons-material/GitHub';
 import SchoolRounded from '@mui/icons-material/SchoolRounded';
 import LocationOnOutlined from '@mui/icons-material/LocationOnOutlined';
 import Header from './components/Header';
+import TypedName from './components/TypedName';
 import ContributionChartColors from './components/ContributionChartColors';
 import useScrollReveal from './useScrollReveal';
 import './LandingPage.css';
@@ -154,7 +155,7 @@ const LandingPage = () => {
                     <div className="hero-content">
                         <div className="about-hero-intro">
                             <div className="hero-heading">
-                                <h1 id="about-title">Antonio Indindoli</h1>
+                                <TypedName />
                             </div>
                             <p className="hero-subtitle">
                                 Software developer specializing in full-stack web applications, Unity, and developer tools, with a focus on intuitive, engaging user experiences.

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.100791ae.css",
-    "main.js": "/static/js/main.250ae2b6.js",
+    "main.css": "/static/css/main.d2afa822.css",
+    "main.js": "/static/js/main.5b1622f6.js",
     "static/media/poker.png": "/static/media/poker.3fc10d6707114ec5c6be.png",
     "static/media/unitytoolkit.png": "/static/media/unitytoolkit.fa704b903fbb1556113e.png",
     "static/media/mayuns.png": "/static/media/mayuns.299f19a2c71bbb3603e8.png",
@@ -15,11 +15,11 @@
     "static/media/dsb-logo.png": "/static/media/dsb-logo.cb8d2f2cbadb34c4155b.png",
     "static/media/poker-logo.png": "/static/media/poker-logo.13e681067324ca6ae743.png",
     "index.html": "/index.html",
-    "main.100791ae.css.map": "/static/css/main.100791ae.css.map",
-    "main.250ae2b6.js.map": "/static/js/main.250ae2b6.js.map"
+    "main.d2afa822.css.map": "/static/css/main.d2afa822.css.map",
+    "main.5b1622f6.js.map": "/static/js/main.5b1622f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.100791ae.css",
-    "static/js/main.250ae2b6.js"
+    "static/css/main.d2afa822.css",
+    "static/js/main.5b1622f6.js"
   ]
 }
