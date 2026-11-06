@@ -158,7 +158,7 @@ const LandingPage = () => {
                                 <TypedName />
                             </div>
                             <p className="hero-subtitle">
-                                Software developer specializing in full-stack web applications, Unity, and developer tools, with a focus on intuitive, engaging user experiences.
+                                Software developer specializing in full-stack web and Unity development.
                             </p>
                             <div className="hero-socials" aria-label="Social profiles">
                                 <a href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
