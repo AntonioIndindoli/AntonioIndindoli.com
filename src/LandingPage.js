@@ -88,6 +88,7 @@ const projectItems = [
             'A published Unity toolkit that uses graph-based modeling to simulate structural damage and collapse, with custom 3D tools, a damage API, automated tests, and documentation.',
         technologies: ['Unity', 'C#'],
         image: unityToolkitImage,
+        imagePosition: 'center',
         imageAlt: 'A house breaking apart in the Unity destruction toolkit',
         href: 'https://mayuns.com/#/destructible-structure-builder',
         linkLabel: 'Explore toolkit',
@@ -112,6 +113,7 @@ const projectItems = [
             'A published Unity horror game featuring stealth mechanics, procedural level generation, and optimized scenes with large numbers of dynamic lights and objects.',
         technologies: ['Unity', 'C#'],
         image: steamGameImage,
+        imagePosition: 'center',
         imageAlt: 'A dimly lit corridor in Backrooms: Unseen Tapes',
         href: 'https://mayuns.com/#/backrooms-unseen-tapes',
         linkLabel: 'Explore game',
@@ -124,6 +126,7 @@ const projectItems = [
             'A full-stack athlete–university matching platform with a custom ranking algorithm, backend APIs, SQL data models, Google Cloud deployment, and location-based university discovery.',
         technologies: ['React', 'Next.js', 'SQL', 'Google Cloud'],
         image: aspiroImage,
+        imagePosition: 'left top',
         imageAlt: 'Aspiro athlete matching platform preview',
         href: 'https://github.com/AntonioIndindoli/Aspiro',
         linkLabel: 'View code',
@@ -228,20 +231,20 @@ const LandingPage = () => {
                                             ))}
                                         </ul>
                                     </div>
-                                </div>
-                                <div className="project-preview">
-                                    <div className="project-media">
-                                        <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" />
-                                    </div>
                                     <div className="project-actions">
                                         {project.liveHref && (
                                             <a href={project.liveHref} className="project-link" aria-label={'Visit ' + project.title + ' site'}>
-                                                Visit site <span aria-hidden="true">↗</span>
+                                                Visit site
                                             </a>
                                         )}
                                         <a href={project.href} className="project-link" aria-label={project.linkLabel + ': ' + project.title}>
-                                            {project.linkLabel} <span aria-hidden="true">↗</span>
+                                            {project.linkLabel}
                                         </a>
+                                    </div>
+                                </div>
+                                <div className="project-preview">
+                                    <div className="project-media">
+                                        <img src={project.image} alt={project.imageAlt} className="project-image" loading="lazy" style={{ '--image-position': project.imagePosition }} />
                                     </div>
                                 </div>
                             </article>
@@ -273,14 +276,14 @@ const LandingPage = () => {
                         <div>
                             <h2 id="contributions-title">GitHub Contributions</h2>
                         </div>
-                        <a className="text-link" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">View profile <span aria-hidden="true">↗</span></a>
+                        <a className="text-link" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">View profile</a>
                     </div>
-                    <div className="contribution-chart">
+                    <div className="contribution-chart" tabIndex="0" role="region" aria-label="GitHub contribution chart; scroll horizontally to see all activity">
                         <ContributionChartColors />
                         {chartUnavailable ? (
                             <p className="contribution-fallback">
                                 The contribution chart is currently unavailable.{' '}
-                                <a href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">See activity on GitHub <span aria-hidden="true">↗</span></a>
+                                <a href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">See activity on GitHub</a>
                             </p>
                         ) : (
                             <img
