@@ -22,6 +22,8 @@ import backroomsLogo from './images/logos/backrooms-logo.png';
 import aspiroLogo from './images/logos/aspiro-logo.png';
 import pokerLogo from './images/logos/poker-logo.png';
 import mayunsLogo from './images/logos/mayuns-logo.png';
+import linuxFileSystemImage from './images/linuxfilesystem.png';
+import linuxFileSystemLogo from './images/logos/linuxfilesystem-logo.png';
 
 const skills = [
     {
@@ -132,17 +134,17 @@ const projectItems = [
         linkLabel: 'View code',
     },
     {
-        title: 'Mayuns',
-        category: 'Game Studio Website',
-        logo: mayunsLogo,
+        title: 'Linux File System',
+        category: 'Systems Programming',
+        logo: linuxFileSystemLogo,
         description:
-            'A responsive website for my game studio, designed to showcase published games and Unity tools with dedicated product pages and support resources.',
-        technologies: ['React', 'JavaScript', 'CSS', 'React Router'],
-        image: mayunsImage,
-        imageAlt: 'Mayuns game development studio website preview',
-        href: 'https://github.com/AntonioIndindoli/Mayuns-Company-Site',
+            'A custom file system built in C with bitmap-based block allocation, hierarchical directories, path resolution, extent-based storage design, and an interactive command-line shell.',
+        technologies: ['C', 'Linux', 'POSIX', 'Make'],
+        image: linuxFileSystemImage,
+        imagePosition: 'center',
+        imageAlt: 'Linux file system command-line interface preview',
+        href: 'https://github.com/AntonioIndindoli/Linux-File-System',
         linkLabel: 'View code',
-        liveHref: 'https://mayuns.com/',
     },
 ];
 
